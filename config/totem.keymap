@@ -63,7 +63,7 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-on-release;
 )
 
-ZMK_COMBO(BSPC,&kp BSPC,LT1 LT2)
+ZMK_COMBO(bspc, &kp BSPC, LT1 LT2)
 
 / {
     combos { compatible = "zmk,combos"; };
