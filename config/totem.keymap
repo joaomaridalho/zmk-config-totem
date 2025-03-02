@@ -63,7 +63,7 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-on-release;
 )
 
-ZMK_COMBO(bspc, &kp BSPC, LT1 LT2)
+ZMK_COMBO(bspc, &kp BSPC, RT1 RT2)
 
 / {
     combos { compatible = "zmk,combos"; };
@@ -75,7 +75,7 @@ ZMK_COMBO(bspc, &kp BSPC, LT1 LT2)
             display-name = "Base";
             bindings = <
               &kp PT_Q       &kp PT_W       &kp PT_E          &kp PT_R         &kp PT_T        &kp PT_Y    &kp PT_U        &kp PT_I        &kp PT_O       &kp PT_P
-              &hml LGUI PT_A  &hml LALT PT_S  &hml LCTRL PT_D    &hml LSHIFT PT_F  &kp PT_G        &kp PT_H    &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA
+              &hml LGUI PT_A  &hml LALT PT_S  &hml LCTRL PT_D    &hml LSHIFT PT_F  &kp PT_G        &kp PT_H    &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_CEDILLA
               &lt 3 ESCAPE  &kp Z       &kp X       &kp PT_C          &kp PT_V         &kp PT_B        &kp PT_N    &kp PT_M        &kp PT_COMMA    &kp PT_DOT     &kp PT_MINUS    &kp APOSTROPHE
                                       &mt LCTRL DEL  &lt 1 SPACE   &kp TAB    &kp RET  &lt 2 BSPC   &kp MINUS
             >;
