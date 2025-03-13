@@ -98,7 +98,7 @@ ZMK_COMBO(paste, &kp LC(PT_P), LB1 LB2)
             display-name = "Fn";
             bindings = <
         &bootloader  &trans  &trans  &trans  &to 4     &kp F1  &kp F2  &kp F3  &kp F4   &kp F5
-        &trans       &trans  &trans  &trans  &trans    &kp F6 kp F2  &kp F3  &kp F4   &kp F5
+        &trans       &trans  &trans  &trans  &trans    &kp F6  &kp F2  &kp F3  &kp F4   &kp F5
 &trans  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F20  &kp F7
                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
