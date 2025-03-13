@@ -51,20 +51,25 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-on-release;
 )
 
+// Combos
 ZMK_COMBO(bspc, &kp BSPC, RT1 RT2)
+ZMK_COMBO(del, &kp DEL, RT2 RT3)
+ZMK_COMBO(tab, &kp TAB, LT2 LT3)
+ZMK_COMBO(copy, &kp LC(PT_C), LB2 LB3)
+ZMK_COMBO(paste, &kp LC(PT_P), LB1 LB2)
+
 
 / {
     combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
-
         Base {
             display-name = "Base";
             bindings = <
               &kp PT_Q       &kp PT_W       &kp PT_E          &kp PT_R         &kp PT_T        &kp PT_Y    &kp PT_U        &kp PT_I        &kp PT_O       &kp PT_P
               &hml LGUI PT_A  &hml LALT PT_S  &hml LCTRL PT_D    &hml LSHIFT PT_F  &kp PT_G        &kp PT_H    &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_CEDILLA
-              &lt 3 ESCAPE  &kp Z       &kp X       &kp PT_C          &kp PT_V         &kp PT_B        &kp PT_N    &kp PT_M        &kp PT_COMMA    &kp PT_DOT     &kp PT_MINUS    &kp APOSTROPHE
+&lt 3 ESCAPE  &kp Z       &kp X       &kp PT_C          &kp PT_V         &kp PT_B        &kp PT_N    &kp PT_M        &kp PT_COMMA    &kp PT_DOT     &kp PT_MINUS    &kp APOSTROPHE
                                       &mt LCTRL DEL  &lt 1 SPACE   &kp TAB    &kp RET  &lt 2 BSPC   &kp MINUS
             >;
         };
@@ -79,7 +84,7 @@ ZMK_COMBO(bspc, &kp BSPC, RT1 RT2)
             >;
         };
 
-        Sym {
+        Symbols {
             display-name = "Sym";
             bindings = <
                 &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
@@ -89,18 +94,18 @@ ZMK_COMBO(bspc, &kp BSPC, RT1 RT2)
             >;
         };
 
-        Fun {
-            display-name = "Fun";
+        Function {
+            display-name = "Fn";
             bindings = <
-        &bootloader  &trans  &trans  &trans  &to 4     &trans  &trans  &trans  &kp END  &kp F1
-        &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F10
+        &bootloader  &trans  &trans  &trans  &to 4     &kp F1  &kp F2  &kp F3  &kp F4   &kp F5
+        &trans       &trans  &trans  &trans  &trans    &kp F6 kp F2  &kp F3  &kp F4   &kp F5
 &trans  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F20  &kp F7
                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
-        Gaming {
-            display-name = "Gaming";
+        GAME {
+            display-name = "Game";
             bindings = <
             &kp Z           &kp X  &kp C      &kp V         &sl 5     &trans  &trans  &trans  &trans  &trans
             &kp TAB         &kp Q  &kp W      &kp E         &kp R     &trans  &trans  &trans  &trans  &trans
@@ -109,8 +114,8 @@ ZMK_COMBO(bspc, &kp BSPC, RT1 RT2)
             >;
         };
 
-        Gaming+ {
-            display-name = "Gaming+";
+        GPLUS {
+            display-name = "Game+";
             bindings = <
         &kp F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp T     &kp RA(RC(Y))  &kp RA(RC(U))  &trans  &trans  &kp LC(RA(DEL))
         &kp L    &kp O         &kp Y         &kp K         &kp G     &kp F5         &trans         &trans  &trans  &trans
