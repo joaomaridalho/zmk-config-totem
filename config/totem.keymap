@@ -52,12 +52,17 @@ ZMK_HOLD_TAP(hmr,
 )
 
 // Combos
-ZMK_COMBO(bspc, &kp BSPC, RT1 RT2)
-ZMK_COMBO(del, &kp DEL, RT2 RT3)
+ZMK_COMBO(del, &kp DEL, RT1 RT2)
+ZMK_COMBO(bspc, &kp BSPC, RT2 RT3)
 ZMK_COMBO(tab, &kp TAB, LT2 LT3)
 ZMK_COMBO(copy, &kp LC(PT_C), LB2 LB3)
 ZMK_COMBO(paste, &kp LC(PT_P), LB1 LB2)
-
+ZMK_COMBO(lpar, &kp PT_LPAR, RT1 RM1)
+ZMK_COMBO(rpar, &kp PT_RPAR, RM1 RB1)
+ZMK_COMBO(lbrc, &kp PT_LBRC, RT2 RM2)
+ZMK_COMBO(rbrc, &kp PT_RBRC, RM2 RB2)
+ZMK_COMBO(lbkt, &kp PT_LBKT, RT3 RM3)
+ZMK_COMBO(rbkt, &kp PT_RBKT, RM3 RB3)
 
 / {
     combos { compatible = "zmk,combos"; };
