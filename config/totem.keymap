@@ -63,6 +63,8 @@ ZMK_COMBO(lbrc, &kp PT_LBRC, RT2 RM2)
 ZMK_COMBO(rbrc, &kp PT_RBRC, RM2 RB2)
 ZMK_COMBO(lbkt, &kp PT_LBKT, RT3 RM3)
 ZMK_COMBO(rbkt, &kp PT_RBKT, RM3 RB3)
+ZMK_COMBO(dqt,&kp PT_DQT, LT1 LM1)
+ZMK_COMBO(sqt,&kp PT_SQT, LM1 LB1)
 
 / {
     combos { compatible = "zmk,combos"; };
