@@ -86,9 +86,8 @@ ZMK_MOD_MORPH(rbkt_rbrc,
 
 
 // Combos
-ZMK_COMBO(del, &bs_del, RT1 RT2)
-ZMK_COMBO(bspc, &kp BSPC, RT2 RT3)
-ZMK_COMBO(tab, &kp TAB, LT2 LT3)
+ZMK_COMBO(del, &bs_del, LT1 LT2)
+ZMK_COMBO(tab, &kp TAB, LM2 LM3)
 ZMK_COMBO(copy, &kp LC(PT_C), LB2 LB3)
 ZMK_COMBO(paste, &kp LC(PT_P), LB1 LB2)
 ZMK_COMBO(lpar_lt, &lpar_lt, RM1 RM2)
@@ -97,8 +96,8 @@ ZMK_COMBO(lbkt_lbrc, &lbkt_lbrc, RB1 RB2)
 ZMK_COMBO(rbkt_rbrc, &rbkt_rbrc, RB2 RB3)
 ZMK_COMBO(dqt,&kp PT_DQT, LT1 LM1)
 ZMK_COMBO(sqt,&kp PT_SQT, LM1 LB1)
-ZMK_COMBO(tilde,&kp PT_TILDE, RT0 RM0)
-ZMK_COMBO(acute_grave,&grave_hold PT_ACUTE 0, LT2 LT3)
+ZMK_COMBO(tilde,&kp PT_TILDE, RT1 RT2)
+ZMK_COMBO(acute_grave,&grave_hold PT_ACUTE 0, RT2 RT3)
 
 / {
     combos { compatible = "zmk,combos"; };
