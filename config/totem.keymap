@@ -52,6 +52,10 @@ ZMK_HOLD_TAP(hmr,
 )
 ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
               mods = <(MOD_LSFT|MOD_RSFT)>; keep-mods = <MOD_RSFT>;)
+ZMK_MOD_MORPH(lpar_lt, bindings = <&kp PT_LPAR>, <&kp PT_LT>;
+              mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(rpar_rt, bindings = <&kp PT_RPAR>, <&kp PT_RT>;
+              mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 // Combos
 ZMK_COMBO(del, &bs_del, RT1 RT2)
