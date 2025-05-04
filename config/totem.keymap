@@ -56,6 +56,10 @@ ZMK_MOD_MORPH(lpar_lt, bindings = <&kp PT_LPAR>, <&kp PT_LT>;
               mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(rpar_rt, bindings = <&kp PT_RPAR>, <&kp PT_RT>;
               mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(lbkt_lbrc, bindings = <&kp PT_LBKT>, <&kp PT_LBRC>;
+              mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(rbkt_rbrc, bindings = <&kp PT_RBKT>, <&kp PT_RBRC>;
+              mods = <(MOD_LSFT|MOD_RSFT)>;)
 
 // Combos
 ZMK_COMBO(del, &bs_del, RT1 RT2)
@@ -65,11 +69,8 @@ ZMK_COMBO(copy, &kp LC(PT_C), LB2 LB3)
 ZMK_COMBO(paste, &kp LC(PT_P), LB1 LB2)
 ZMK_COMBO(lpar_lt, &lpar_lt, RM1 RM2)
 ZMK_COMBO(rpar_rt, &rpar_rt, RM2 RM3)
-ZMK_COMBO(rpar, &kp PT_RPAR, RM1 RB1)
-ZMK_COMBO(lbrc, &kp PT_LBRC, RT2 RM2)
-ZMK_COMBO(rbrc, &kp PT_RBRC, RM2 RB2)
-ZMK_COMBO(lbkt, &kp PT_LBKT, RT3 RM3)
-ZMK_COMBO(rbkt, &kp PT_RBKT, RM3 RB3)
+ZMK_COMBO(lbkt_lbrc, &lbkt_lbrc, RB1 RB2)
+ZMK_COMBO(rbkt_rbrc, &rbkt_rbrc, RB2 RB3)
 ZMK_COMBO(dqt,&kp PT_DQT, LT1 LM1)
 ZMK_COMBO(sqt,&kp PT_SQT, LM1 LB1)
 
