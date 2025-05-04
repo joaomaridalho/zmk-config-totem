@@ -82,6 +82,7 @@ ZMK_MOD_MORPH(lbkt_lbrc,
 ZMK_MOD_MORPH(rbkt_rbrc,
     bindings = <&kp PT_RBKT>, <&kp PT_RBRC>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
+)
 
 
 // Combos
