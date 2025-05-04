@@ -61,6 +61,7 @@ ZMK_MOD_MORPH(
     bindings = <&kp PT_LPAR>, <&kp PT_LT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     )
+
 ZMK_MOD_MORPH(
     rpar_rt, 
     bindings = <&kp PT_RPAR>, <&kp PT_RT>;
