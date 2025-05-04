@@ -63,7 +63,7 @@ ZMK_MOD_MORPH(
 
 ZMK_MOD_MORPH(
     rpar_rt, 
-    bindings = <&kp PT_RPAR>, <&kp PT_RT>;
+    bindings = <&kp PT_RPAR>, <&kp PT_GT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     )
 ZMK_MOD_MORPH(
