@@ -50,10 +50,17 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
 )
-ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
-              mods = <(MOD_LSFT|MOD_RSFT)>; keep-mods = <MOD_RSFT>;)
-ZMK_MOD_MORPH(lpar_lt, bindings = <&kp PT_LPAR>, <&kp PT_LT>;
-              mods = <(MOD_LSFT|MOD_RSFT)>;)
+ZMK_MOD_MORPH(
+    bs_del,
+    bindings = <&kp BSPC>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    keep-mods = <MOD_RSFT>;
+    )
+ZMK_MOD_MORPH(
+    lpar_lt, 
+    bindings = <&kp PT_LPAR>, <&kp PT_LT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    )
 ZMK_MOD_MORPH(rpar_rt, bindings = <&kp PT_RPAR>, <&kp PT_RT>;
               mods = <(MOD_LSFT|MOD_RSFT)>;)
 ZMK_MOD_MORPH(lbkt_lbrc, bindings = <&kp PT_LBKT>, <&kp PT_LBRC>;
