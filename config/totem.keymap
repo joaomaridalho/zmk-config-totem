@@ -50,9 +50,11 @@ ZMK_HOLD_TAP(hmr,
     hold-trigger-key-positions = <KEYS_L THUMBS>;
     hold-trigger-on-release;
 )
+ZMK_MOD_MORPH(bs_del, bindings = <&kp BSPC>, <&kp DEL>;
+              mods = <(MOD_LSFT|MOD_RSFT)>; keep-mods = <MOD_RSFT>;)
 
 // Combos
-ZMK_COMBO(del, &kp DEL, RT1 RT2)
+ZMK_COMBO(del, &bs_del, RT1 RT2)
 ZMK_COMBO(bspc, &kp BSPC, RT2 RT3)
 ZMK_COMBO(tab, &kp TAB, LT2 LT3)
 ZMK_COMBO(copy, &kp LC(PT_C), LB2 LB3)
