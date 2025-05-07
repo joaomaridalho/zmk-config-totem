@@ -72,7 +72,7 @@ ZMK_MOD_MORPH(lpar_lt,
     bindings = <&kp PT_LPAR>, <&kp PT_LT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
-ZMK_MOD_MORPH(rpar_rt, 
+ZMK_MOD_MORPH(rpar_gt, 
     bindings = <&kp PT_RPAR>, <&kp PT_GT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
@@ -91,7 +91,7 @@ ZMK_COMBO(tab, &kp TAB, LM2 LM3)
 ZMK_COMBO(copy, &kp LC(PT_C), LB2 LB3)
 ZMK_COMBO(paste, &kp LC(PT_P), LB1 LB2)
 ZMK_COMBO(lpar_lt, &lpar_lt, RM1 RM2)
-ZMK_COMBO(rpar_rt, &rpar_rt, RM2 RM3)
+ZMK_COMBO(rpar_gt, &rpar_gt, RM2 RM3)
 ZMK_COMBO(lbkt_lbrc, &lbkt_lbrc, RB1 RB2)
 ZMK_COMBO(rbkt_rbrc, &rbkt_rbrc, RB2 RB3)
 ZMK_COMBO(dqt,&kp PT_DQT, LT1 LM1)
