@@ -129,7 +129,7 @@ ZMK_BASE_LAYER(Colemak,
                                                        &mt LCTRL DEL    &lt SYM RET      &kp RET          , &kp SPACE        &lt 2 SPACE      &kp MINUS
 )
 ZMK_BASE_LAYER(Num,
-                     &kp PT_SLASH     &kp PT_N7        &kp PT_N8        &kp PT_N9        &kp PT_MINUS     , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P,
+                     &kp PT_SLASH     &kp PT_N7        &kp PT_N8        &kp PT_N9        &kp PT_MINUS     , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &to COLEMAK,
                      &kp PT_ASTERISK  &kp PT_N4        &kp PT_N5        &kp PT_N6        &kp PT_PLUS      , &kp PT_H         &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA,
     &kp ESCAPE       &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &kp APOSTROPHE,
                                                        &kp PT_DOT       &kp PT_N0        &kp RET          , &kp SPACE        &lt 2 SPACE      &kp MINUS
