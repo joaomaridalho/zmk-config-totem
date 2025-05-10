@@ -10,12 +10,11 @@
 
 
 #define BASE 0
-#define NAV 1
-#define SYM 2
-#define FN 3
-#define GAME 4
-#define GPLUS 5
+#define COLEMAK 1
+#define NUM 2
+
 #define QUICK_TAP_MS 175
+
 &mt {
     quick-tap-ms = <100>;
     global-quick-tap;
@@ -58,6 +57,19 @@ ZMK_HOLD_TAP(grave_hold,
     quick-tap-ms = <QUICK_TAP_MS>;
 )
 
+#define SMART_NUM &smart_num NUM 0
+ZMK_HOLD_TAP(smart_num, 
+    bindings = <&mo>, <&num_dance>;
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+)
+ZMK_TAP_DANCE(num_dance,
+    bindings = <&num_word NUM>, <&sl NUM>;
+    tapping-term-ms = <200>;
+)
+
+
 // Macros
 ZMK_MACRO(grave_spc,
     bindings = <&kp PT_GRAVE &kp PT_SPACE>;
@@ -99,69 +111,62 @@ ZMK_COMBO(sqt,&kp PT_SQT, LM1 LB1)
 ZMK_COMBO(tilde,&kp PT_TILDE, RT1 RT2)
 ZMK_COMBO(acute_grave,&grave_hold PT_ACUTE 0, RT2 RT3)
 
-/ {
-    combos { compatible = "zmk,combos"; };
+#ifndef ZMK_BASE_LAYER
+  #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
+      ZMK_LAYER(name, LT RT LM RM LB RB LH RH)
+#endif
 
-    keymap {
-        compatible = "zmk,keymap";
-        Base {
-            display-name = "Base";
-            bindings = <
-              &kp PT_Q       &kp PT_W       &kp PT_E          &kp PT_R         &kp PT_T        &kp PT_Y    &kp PT_U        &kp PT_I        &kp PT_O       &kp PT_P
-              &hml LGUI PT_A  &hml LALT PT_S  &hml LCTRL PT_D    &hml LSHIFT PT_F  &kp PT_G        &kp PT_H    &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA
-&lt 3 ESCAPE  &kp Z       &kp X       &kp PT_C          &kp PT_V         &kp PT_B        &kp PT_N    &kp PT_M        &kp PT_COMMA    &kp PT_DOT     &kp PT_MINUS    &kp APOSTROPHE
-                                      &mt LCTRL DEL  &lt NAV RET   &kp TAB    &kp RET  &lt 2 SPACE   &kp MINUS
-            >;
-        };
+ZMK_BASE_LAYER(Base,
+                     &kp PT_Q         &kp PT_W         &kp PT_E         &kp PT_R         &kp PT_T         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P
+                     &hml LGUI PT_A   &hml LALT PT_S   &hml LCTRL PT_D  &hml LSHIFT PT_F &kp PT_G         , &kp PT_H         &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA
+    &kp ESCAPE       &kp Z            &kp X            &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &kp APOSTROPHE
+                                                       &mt LCTRL DEL    &lt NAV RET      &kp RET          , &kp SPACE        &lt 2 SPACE      &kp MINUS
+)
+ZMK_BASE_LAYER(Colemak,
+                     &kp PT_Q         &kp PT_W         &kp PT_E         &kp PT_R         &kp PT_T         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P
+                     &hml LGUI PT_A   &hml LALT PT_S   &hml LCTRL PT_D  &hml LSHIFT PT_F &kp PT_G         , &kp PT_H         &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA
+    &kp ESCAPE       &kp Z            &kp X            &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &kp APOSTROPHE
+                                                       &mt LCTRL DEL    &lt NAV RET      &kp RET          , &kp SPACE        &lt 2 SPACE      &kp MINUS
+)
+ZMK_BASE_LAYER(Num,
+                     &kp PT_SLASH     &kp PT_N7        &kp PT_N8        &kp PT_N9        &kp PT_MINUS     , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P
+                     &kp PT_ASTERISK  &kp PT_N4        &kp PT_N5        &kp PT_N6        &kp PT_PLUS      , &kp PT_H         &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA
+    &kp ESCAPE       &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &kp APOSTROPHE
+                                                       &kp PT_N0        &kp PT_DOT       &kp RET          , &kp SPACE        &tog      &kp MINUS
+)
+// / {
+//     combos { compatible = "zmk,combos"; };
 
-        Nav {
-            display-name = "Nav";
-            bindings = <
-              &kp TILDE       &trans     &kp UP_ARROW  &trans     &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-              &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
-&kp LEFT_ALT  &kp LEFT_WIN    &kp MINUS  &trans        &kp PLUS   &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
-                                         &trans        &trans     &trans      &trans    &trans        &kp DOT
-            >;
-        };
+//     keymap {
+//         compatible = "zmk,keymap";
+//         Base {
+//             display-name = "Base";
+//             bindings = <
+//               &kp PT_Q       &kp PT_W       &kp PT_E          &kp PT_R         &kp PT_T        &kp PT_Y    &kp PT_U        &kp PT_I        &kp PT_O       &kp PT_P
+//               &hml LGUI PT_A  &hml LALT PT_S  &hml LCTRL PT_D    &hml LSHIFT PT_F  &kp PT_G        &kp PT_H    &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA
+//         &kp PT_N    &kp PT_M        &kp PT_COMMA    &kp PT_DOT     &kp PT_MINUS    &kp APOSTROPHE
+//                                       &mt LCTRL DEL  &lt NAV RET   &kp TAB    &kp RET  &lt 2 SPACE   &kp MINUS
+//             >;
+//         };
+//         Colemak {
+//             display-name = "Num";
+//             bindings = <
+//               &kp PT_Q       &kp PT_W       &kp PT_E          &kp PT_R         &kp PT_T        &kp PT_Y    &kp PT_U        &kp PT_I        &kp PT_O       &kp PT_P
+//               &hml LGUI PT_A  &hml LALT PT_S  &hml LCTRL PT_D    &hml LSHIFT PT_F  &kp PT_G        &kp PT_H    &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA
+// &lt 3 ESCAPE  &kp Z       &kp X       &kp PT_C          &kp PT_V         &kp PT_B        &kp PT_N    &kp PT_M        &kp PT_COMMA    &kp PT_DOT     &kp PT_MINUS    &kp APOSTROPHE
+//                                       &mt LCTRL DEL  &lt NAV RET   &kp TAB    &kp RET  &lt 2 SPACE   &kp MINUS
+//             >;
 
-        Symbols {
-            display-name = "Sym";
-            bindings = <
-                &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPERSAND  &kp KP_ASTERISK  &kp SQT  &kp DQT
-                &trans    &trans  &trans    &trans      &trans         &trans     &trans         &trans           &trans   &trans
-&studio_unlock  &trans    &trans  &trans    &trans      &trans         &kp UNDER  &kp EQUAL      &trans           &trans   &kp SLASH  &kp HOME
-                                  &trans    &trans      &trans         &trans     &trans         &trans
-            >;
-        };
+//         }
 
-        Function {
-            display-name = "Fn";
-            bindings = <
-        &bootloader  &trans  &trans  &trans  &to 4     &kp F1  &kp F2  &kp F3  &kp F4   &kp F5
-        &trans       &trans  &trans  &trans  &trans    &kp F6  &kp F2  &kp F3  &kp F4   &kp F5
-&trans  &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &kp F20  &kp F7
-                             &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        GAME {
-            display-name = "Game";
-            bindings = <
-            &kp Z           &kp X  &kp C      &kp V         &sl 5     &trans  &trans  &trans  &trans  &trans
-            &kp TAB         &kp Q  &kp W      &kp E         &kp R     &trans  &trans  &trans  &trans  &trans
-&kp ESCAPE  &kp LEFT_SHIFT  &kp A  &kp S      &kp D         &kp F     &trans  &trans  &trans  &trans  &trans  &trans
-                                   &kp LCTRL  &kp LEFT_ALT  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        GPLUS {
-            display-name = "Game+";
-            bindings = <
-        &kp F10  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp T     &kp RA(RC(Y))  &kp RA(RC(U))  &trans  &trans  &kp LC(RA(DEL))
-        &kp L    &kp O         &kp Y         &kp K         &kp G     &kp F5         &trans         &trans  &trans  &trans
-&trans  &to 0    &trans        &trans        &trans        &trans    &trans         &trans         &trans  &trans  &trans           &kp LA(F4)
-                               &kp J         &kp I         &kp M     &trans         &trans         &trans
-            >;
-        };
-    };
-};
+//         Nav {
+//             display-name = "Nav";
+//             bindings = <
+//               &kp TILDE       &trans     &kp UP_ARROW  &trans     &kp LBRC    &kp RBRC  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+//               &kp LEFT_SHIFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp LBKT    &kp RBKT  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
+// &kp LEFT_ALT  &kp LEFT_WIN    &kp MINUS  &trans        &kp PLUS   &kp LPAR    &kp RPAR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MULTIPLY  &kp PLUS
+//                                          &trans        &trans     &trans      &trans    &trans        &kp DOT
+//             >;
+//         };
+//     };
+// };
