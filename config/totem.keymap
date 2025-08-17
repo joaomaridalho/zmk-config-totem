@@ -79,10 +79,10 @@ ZMK_MOD_MORPH(bs_del,
     bindings = <&kp BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
-ZMK_MOD_MORPH(slsh_blslsh,
-    bindings = <&kp PT_FSLH>, <&kp PT_BSLH>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
+// ZMK_MOD_MORPH(slsh_blslsh,
+//     bindings = <&kp PT_FSLH>, <&kp PT_BSLH>;
+//     mods = <(MOD_LSFT|MOD_RSFT)>;
+// )
 ZMK_MOD_MORPH(lpar_lt, 
     bindings = <&kp PT_LPAR>, <&kp PT_LT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
