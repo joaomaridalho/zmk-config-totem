@@ -9,7 +9,7 @@
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // Thumb keys.
 
 
-#define COMBO_TERM_FAST 18
+#define COMBO_TERM_FAST 23
 #define COMBO_TERM_SLOW 30
 
 #define COMBO_IDLE_FAST 150
