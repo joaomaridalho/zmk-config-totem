@@ -114,8 +114,8 @@ ZMK_MOD_MORPH(at_hash,
     bindings = <&kp PT_AT>, <&kp PT_HASH>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
-ZMK_MOD_MORPH(quotes_double,
-    bindings = <&kp PT_SQT>, <&kp PT_DQT>;
+ZMK_MOD_MORPH(dqt_sqt,
+    bindings = <&kp PT_DQT>, <&kp PT_SQT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 ZMK_MOD_MORPH(equal_percent,
@@ -124,7 +124,6 @@ ZMK_MOD_MORPH(equal_percent,
 )
 
 // Combos
-ZMK_COMBO(del, &bs_del, LT1 LT2)
 ZMK_COMBO(tab, &kp TAB, LM2 LM3)
 ZMK_COMBO(copy, &kp LC(PT_C), LB2 LB3)
 ZMK_COMBO(paste, &kp LC(PT_P), LB1 LB2)
@@ -134,6 +133,7 @@ ZMK_COMBO(lbkt_lbrc, &lbkt_lbrc, RB1 RB2,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rbkt_rbrc, &rbkt_rbrc, RB2 RB3,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST) 
 ZMK_COMBO(dqt,&kp PT_DQT, LT1 LM1)
 ZMK_COMBO(sqt,&kp PT_SQT, LM1 LB1)
+ZMK_COMBO(dqt_sqt, &dqt_sqt, LT1 LT2)
 ZMK_COMBO(tilde,&kp PT_TILDE, RT1 RT2)
 ZMK_COMBO(acute_grave,&grave_hold PT_ACUTE 0, RT2 RT3)
 
