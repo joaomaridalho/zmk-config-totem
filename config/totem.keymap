@@ -98,7 +98,30 @@ ZMK_MOD_MORPH(rbkt_rbrc,
     bindings = <&kp PT_RBKT>, <&kp PT_RBRC>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
-
+ZMK_MOD_MORPH(exclam_question,
+    bindings = <&kp PT_EXCL>, <&kp PT_QUESTION>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+ZMK_MOD_MORPH(pipe_ampersand,
+    bindings = <&kp PT_PIPE>, <&kp PT_AMPS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+ZMK_MOD_MORPH(slash_bslash,
+    bindings = <&kp PT_SLASH>, <&kp PT_BSLH>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+ZMK_MOD_MORPH(at_hash,
+    bindings = <&kp PT_AT>, <&kp PT_HASH>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+ZMK_MOD_MORPH(quotes_double,
+    bindings = <&kp PT_SQT>, <&kp PT_DQT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+ZMK_MOD_MORPH(equal_percent,
+    bindings= <&kp PT_EQUAL>, <&kp PT_PRCNT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
 
 // Combos
 ZMK_COMBO(del, &bs_del, LT1 LT2)
