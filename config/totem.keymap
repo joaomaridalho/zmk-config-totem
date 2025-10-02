@@ -131,8 +131,6 @@ ZMK_COMBO(lpar_lt, &lpar_lt, RM1 RM2,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(L
 ZMK_COMBO(rpar_gt, &rpar_gt, RM2 RM3,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(LALT), KEYS_L)
 ZMK_COMBO(lbkt_lbrc, &lbkt_lbrc, RB1 RB2,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST) 
 ZMK_COMBO(rbkt_rbrc, &rbkt_rbrc, RB2 RB3,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST) 
-ZMK_COMBO(dqt,&kp PT_DQT, LT1 LM1)
-ZMK_COMBO(sqt,&kp PT_SQT, LM1 LB1)
 ZMK_COMBO(dqt_sqt, &dqt_sqt, LT1 LT2)
 ZMK_COMBO(tilde,&kp PT_TILDE, RT1 RT2)
 ZMK_COMBO(acute_grave,&grave_hold PT_ACUTE 0, RT2 RT3)
@@ -146,7 +144,7 @@ ZMK_BASE_LAYER(Base,
                      &kp PT_Q         &kp PT_W         &kp PT_E         &kp PT_R         &kp PT_T         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
                      &hml LGUI PT_A   &hml LALT PT_S   &hml LCTRL PT_D  &hml LSHIFT PT_F &kp PT_G         , &kp PT_H         &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA ,
     &kp ESCAPE       &kp PT_Z         &kp PT_X         &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &kp PT_DOT ,
-                                                       &kp TAB          &kp RET          &sk LSHFT        , &kp SPACE        &kp SPACE        &bs_del 
+                                                       &kp TAB          &kp RET          &sk LSHFT        , &mo NUM          &kp SPACE        &bs_del 
 )
 ZMK_BASE_LAYER(Colemak,
                      &kp PT_Q         &kp PT_W         &kp PT_F         &kp PT_P         &kp PT_B         , &kp PT_J         &kp PT_L         &kp PT_U         &kp PT_Y        &kp PT_C_CEDILLA,
@@ -155,8 +153,8 @@ ZMK_BASE_LAYER(Colemak,
                                                        &mt LCTRL DEL    &lt SYM RET      &kp RET          , &kp SPACE        &lt 2 SPACE      &kp MINUS
 )
 ZMK_BASE_LAYER(Num,
-                     &kp PT_SLASH     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_MINUS     , &none            &kp RC(PT_D)     &kp RC(PT_U)     &none           &to COLEMAK,
+                     &kp PT_SLASH     &kp PT_N7        &kp PT_N8        &kp PT_N9        &kp PT_MINUS     , &none            &kp RC(PT_D)     &kp RC(PT_U)     &none           &to COLEMAK,
                      &kp PT_ASTERISK  &kp PT_N4        &kp PT_N5        &kp PT_N6        &kp PT_PLUS      , &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT       &none ,
-    &kp ESCAPE       &kp PT_COMMA     &kp PT_N7        &kp PT_N8        &kp PT_N9        &kp PT_EQUAL     , &kp PT_N         &sk LSHIFT       &sk RCTRL        &sk RALT        &sk RGUI    &none ,
+    &kp ESCAPE       &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &sk LSHIFT       &sk RCTRL        &sk RALT        &sk RGUI    &none ,
                                                        &kp PT_DOT       &kp PT_N0        &kp RET          , &kp SPACE        &lt 2 SPACE      &kp MINUS
 )
