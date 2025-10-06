@@ -1,2 +1,3 @@
 parse_config:
   zmk_additional_includes: ["zmk-helpers/include"]
+  zmk_remove_keycode_prefix: ["DE_"]
