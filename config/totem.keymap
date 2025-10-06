@@ -1,6 +1,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#ifndef KEYMAP_DRAWER
 #include "keys_pt.h"
+#endif
 #include "zmk-helpers/key-labels/totem.h"       
 #include "zmk-helpers/helper.h"
 
