@@ -1,0 +1,148 @@
+layout: {zmk_keyboard: totem}
+layers:
+  Base:
+  - PT Q
+  - PT W
+  - PT E
+  - PT R
+  - PT T
+  - PT Y
+  - PT U
+  - PT I
+  - PT O
+  - PT P
+  - {t: PT A, h: LGUI}
+  - {t: PT S, h: LALT}
+  - {t: PT D, h: LCTRL}
+  - {t: PT F, h: LSHIFT}
+  - PT G
+  - PT H
+  - {t: PT J, h: RSHFT}
+  - {t: PT K, h: RCTRL}
+  - {t: PT L, h: LALT}
+  - {t: PT C CEDILLA, h: RGUI}
+  - ESCAPE
+  - PT Z
+  - PT X
+  - PT C
+  - PT V
+  - PT B
+  - PT N
+  - PT M
+  - PT COMMA
+  - PT DOT
+  - PT MINUS
+  - PT DOT
+  - TAB
+  - RET
+  - {t: LSHFT, h: sticky}
+  - Num
+  - SPACE
+  - {t: BSPC, s: DEL}
+  Colemak:
+  - PT Q
+  - PT W
+  - PT F
+  - PT P
+  - PT B
+  - PT J
+  - PT L
+  - PT U
+  - PT Y
+  - PT C CEDILLA
+  - {t: PT A, h: LGUI}
+  - {t: PT R, h: LALT}
+  - {t: PT S, h: LCTRL}
+  - {t: PT T, h: LSHIFT}
+  - PT G
+  - PT M
+  - {t: PT N, h: RSHFT}
+  - {t: PT E, h: RCTRL}
+  - {t: PT I, h: LALT}
+  - {t: PT O, h: RGUI}
+  - ESCAPE
+  - PT Z
+  - PT X
+  - PT C
+  - PT D
+  - PT V
+  - PT K
+  - PT H
+  - PT COMMA
+  - PT DOT
+  - PT MINUS
+  - ''''
+  - {t: DEL, h: LCTRL}
+  - {t: RET, h: Num}
+  - RET
+  - SPACE
+  - {t: SPACE, h: Num}
+  - '-'
+  Num:
+  - PT SLASH
+  - PT 7
+  - PT 8
+  - PT 9
+  - PT MINUS
+  - ''
+  - Ctl+PT D
+  - Ctl+PT U
+  - ''
+  - {t: Colemak, h: toggle}
+  - PT ASTERISK
+  - PT 4
+  - PT 5
+  - PT 6
+  - PT PLUS
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - ''
+  - ESCAPE
+  - PT COMMA
+  - PT 1
+  - PT 2
+  - PT 3
+  - PT EQUAL
+  - PT N
+  - {t: LSHIFT, h: sticky}
+  - {t: RCTRL, h: sticky}
+  - {t: RALT, h: sticky}
+  - {t: RGUI, h: sticky}
+  - ''
+  - PT DOT
+  - PT 0
+  - RET
+  - {t: SPACE, type: held}
+  - {t: SPACE, h: Num}
+  - '-'
+combos:
+- p: [12, 11]
+  k: {t: PT QUESTION, h: Sft+LALT, s: PT EXCL}
+- p: [13, 12]
+  k: {t: PT SLASH, h: Sft+LCTRL, s: PT BSLH}
+- p: [23, 22]
+  k: Ctl+PT C
+- p: [24, 23]
+  k: Ctl+PT P
+- p: [16, 17]
+  k: {t: PT LPAR, h: Sft+LCTRL, s: PT LT}
+- p: [17, 18]
+  k: {t: PT RPAR, h: Sft+LALT, s: PT GT}
+- p: [27, 28]
+  k: {t: PT LBKT, s: PT LBRC}
+- p: [28, 29]
+  k: {t: PT RBKT, s: PT RBRC}
+- p: [3, 2]
+  k: {t: PT DQT, s: PT SQT}
+- p: [2, 1]
+  k: {t: PT PIPE, s: PT AMPS}
+- p: [15, 16]
+  k: {t: PT AT, s: PT HASH}
+- p: [5, 6]
+  k: PT ORDM
+- p: [6, 7]
+  k: PT TILDE
+- p: [7, 8]
+  k: {t: '&grave_spc', h: PT ACUTE}
