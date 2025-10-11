@@ -112,8 +112,8 @@ layers:
   - {t: RGUI, h: sticky}
   - ''
   - .
-  - '0'
   - RET
+  - '0'
   - {t: SPACE, type: held}
   - {t: SPACE, h: Num}
   - '-'
