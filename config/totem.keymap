@@ -124,6 +124,10 @@ ZMK_MOD_MORPH(equal_percent,
     bindings= <&kp PT_EQUAL>, <&kp PT_PRCNT>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
+ZMK_MOD_MORPH(dollar_euro,
+    bindings= <&kp PT_DOLLAR>, <&kp PT_EURO>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
 
 // Combos
 ZMK_COMBO(quest_excl, &quest_excl, LM2 LM3,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(LALT), KEYS_L)
@@ -136,6 +140,7 @@ ZMK_COMBO(lbkt_lbrc, &lbkt_lbrc, RB1 RB2,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rbkt_rbrc, &rbkt_rbrc, RB2 RB3,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST) 
 ZMK_COMBO(dqt_sqt, &dqt_sqt, LT1 LT2)
 ZMK_COMBO(pipe_ampersand, &pipe_ampersand, LT2 LT3)
+ZMK_COMBO(dollar_euro, &pipe_ampersand, LM0 LM1)
 ZMK_COMBO(at_hash, &at_hash, RM0 RM1)
 ZMK_COMBO(ordm, &kp PT_ORDM, RT0 RT1)
 ZMK_COMBO(tilde,&kp PT_TILDE, RT1 RT2)
