@@ -362,6 +362,26 @@ path.combo {
 <text x="609" y="42" class="combo tap">~</text>
 </g>
 <g class="combo combopos-14">
+<rect rx="6" ry="6" x="625" y="43" width="28" height="26" class="combo"/>
+<text x="639" y="56" class="combo tap">&quot;</text>
+</g>
+<g class="combo combopos-15">
+<rect rx="6" ry="6" x="566" y="71" width="28" height="26" class="combo"/>
+<text x="580" y="84" class="combo tap">&lt;</text>
+</g>
+<g class="combo combopos-16">
+<rect rx="6" ry="6" x="690" y="77" width="28" height="26" class="combo"/>
+<text x="704" y="90" class="combo tap">&gt;</text>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="566" y="127" width="28" height="26" class="combo"/>
+<text x="580" y="140" class="combo tap">{</text>
+</g>
+<g class="combo combopos-18">
+<rect rx="6" ry="6" x="687" y="133" width="28" height="26" class="combo"/>
+<text x="701" y="146" class="combo tap">}</text>
+</g>
+<g class="combo combopos-19">
 <rect rx="6" ry="6" x="659" y="32" width="28" height="26" class="combo"/>
 <text x="673" y="45" class="combo tap"><tspan style="font-size: 70%">&amp;grave_spc</tspan></text>
 <text x="673" y="56" class="combo hold">ACUTE</text>
@@ -607,6 +627,26 @@ path.combo {
 <text x="609" y="42" class="combo tap">~</text>
 </g>
 <g class="combo combopos-14">
+<rect rx="6" ry="6" x="625" y="43" width="28" height="26" class="combo"/>
+<text x="639" y="56" class="combo tap">&quot;</text>
+</g>
+<g class="combo combopos-15">
+<rect rx="6" ry="6" x="566" y="71" width="28" height="26" class="combo"/>
+<text x="580" y="84" class="combo tap">&lt;</text>
+</g>
+<g class="combo combopos-16">
+<rect rx="6" ry="6" x="690" y="77" width="28" height="26" class="combo"/>
+<text x="704" y="90" class="combo tap">&gt;</text>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="566" y="127" width="28" height="26" class="combo"/>
+<text x="580" y="140" class="combo tap">{</text>
+</g>
+<g class="combo combopos-18">
+<rect rx="6" ry="6" x="687" y="133" width="28" height="26" class="combo"/>
+<text x="701" y="146" class="combo tap">}</text>
+</g>
+<g class="combo combopos-19">
 <rect rx="6" ry="6" x="659" y="32" width="28" height="26" class="combo"/>
 <text x="673" y="45" class="combo tap"><tspan style="font-size: 70%">&amp;grave_spc</tspan></text>
 <text x="673" y="56" class="combo hold">ACUTE</text>
@@ -843,6 +883,26 @@ path.combo {
 <text x="609" y="42" class="combo tap">~</text>
 </g>
 <g class="combo combopos-14">
+<rect rx="6" ry="6" x="625" y="43" width="28" height="26" class="combo"/>
+<text x="639" y="56" class="combo tap">&quot;</text>
+</g>
+<g class="combo combopos-15">
+<rect rx="6" ry="6" x="566" y="71" width="28" height="26" class="combo"/>
+<text x="580" y="84" class="combo tap">&lt;</text>
+</g>
+<g class="combo combopos-16">
+<rect rx="6" ry="6" x="690" y="77" width="28" height="26" class="combo"/>
+<text x="704" y="90" class="combo tap">&gt;</text>
+</g>
+<g class="combo combopos-17">
+<rect rx="6" ry="6" x="566" y="127" width="28" height="26" class="combo"/>
+<text x="580" y="140" class="combo tap">{</text>
+</g>
+<g class="combo combopos-18">
+<rect rx="6" ry="6" x="687" y="133" width="28" height="26" class="combo"/>
+<text x="701" y="146" class="combo tap">}</text>
+</g>
+<g class="combo combopos-19">
 <rect rx="6" ry="6" x="659" y="32" width="28" height="26" class="combo"/>
 <text x="673" y="45" class="combo tap"><tspan style="font-size: 70%">&amp;grave_spc</tspan></text>
 <text x="673" y="56" class="combo hold">ACUTE</text>
