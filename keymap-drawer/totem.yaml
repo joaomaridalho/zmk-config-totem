@@ -36,7 +36,7 @@ layers:
   - TAB
   - RET
   - {t: LSHFT, h: sticky}
-  - Num
+  - {t: '&num_dance', h: Num}
   - SPACE
   - {t: BSPC, s: DEL}
   Colemak:
