@@ -145,6 +145,11 @@ ZMK_COMBO(dollar_euro, &dollar_euro, LM0 LM1)
 ZMK_COMBO(at_hash, &at_hash, RM0 RM1)
 ZMK_COMBO(ordm, &kp PT_ORDM, RT0 RT1)
 ZMK_COMBO(tilde,&kp PT_TILDE, RT1 RT2)
+ZMK_COMBO(dqt,&kp PT_DQT, RT2 RM2)
+ZMK_COMBO(gt,&kp PT_LT, RT1 RM1)
+ZMK_COMBO(gt,&kp PT_GT, RT3 RM3)
+ZMK_COMBO(gt,&kp PT_LBRC, RM1 RB1)
+ZMK_COMBO(gt,&kp PT_RBRC, RM3 RB3)
 ZMK_COMBO(acute_grave,&grave_hold PT_ACUTE 0, RT2 RT3)
 
 #ifndef ZMK_BASE_LAYER
