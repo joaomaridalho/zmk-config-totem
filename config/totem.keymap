@@ -53,6 +53,13 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
   MAKE_HRM(hm_combo_##NAME, &kp, TAP, SIDE THUMBS)                             \
   ZMK_COMBO_6(NAME, &hm_combo_##NAME HOLD 0, POS, LAYERS, COMBO_MS, IDLE_MS)
 
+ZMK_STICKY_KEY(qsk,
+        bindings = <&kp>;
+        release-after-ms = <1000>;
+        quick-release;
+        ignore-modifiers;
+)
+
 ZMK_HOLD_TAP(grave_hold,
     bindings = <&kp>, <&grave_spc>; 
     flavor = "balanced";
@@ -161,7 +168,7 @@ ZMK_BASE_LAYER(Base,
                      &kp PT_Q         &kp PT_W         &kp PT_E         &kp PT_R         &kp PT_T         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
                      &hml LGUI PT_A   &hml LALT PT_S   &hml LCTRL PT_D  &hml LSHIFT PT_F &kp PT_G         , &kp PT_H         &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA ,
     &kp ESCAPE       &kp PT_Z         &kp PT_X         &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &kp PT_DOT ,
-                                                       &kp TAB          &kp RET          &sk LSHFT        , SMART_NUM        &kp SPACE        &bs_del 
+                                                       &kp TAB          &kp RET          &qsk LSHFT       , SMART_NUM        &kp SPACE        &bs_del 
 )
 ZMK_BASE_LAYER(Colemak,
                      &kp PT_Q         &kp PT_W         &kp PT_F         &kp PT_P         &kp PT_B         , &kp PT_J         &kp PT_L         &kp PT_U         &kp PT_Y        &kp PT_C_CEDILLA,
