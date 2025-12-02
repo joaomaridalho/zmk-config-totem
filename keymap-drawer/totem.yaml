@@ -116,7 +116,7 @@ layers:
   - '0'
   - {t: SPACE, type: held}
   - {t: SPACE, h: Num}
-  - '-'
+  - {t: BSPC, s: DEL}
 combos:
 - p: [12, 11]
   k: {t: '?', h: Sft+LALT, s: '!'}

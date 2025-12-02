@@ -810,7 +810,8 @@ path.combo {
 </a></g>
 <g transform="translate(596, 236)" class="key keypos-37">
 <rect rx="6" ry="6" x="-28" y="-26" width="55" height="52" class="key"/>
-<text x="0" y="0" class="key tap">-</text>
+<text x="0" y="0" class="key tap">BSPC</text>
+<text x="0" y="-24" class="key shifted">DEL</text>
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="166" y="88" width="28" height="26" class="combo"/>
