@@ -114,7 +114,7 @@ layers:
   - .
   - RET
   - '0'
-  - {t: '&layoff 2', type: held}
+  - {t: CANCEL, type: held}
   - SPACE
   - {t: BSPC, s: DEL}
 combos:
