@@ -114,8 +114,8 @@ layers:
   - .
   - RET
   - '0'
-  - {t: SPACE, type: held}
-  - {t: SPACE, h: Num}
+  - {t: '&layoff 2', type: held}
+  - SPACE
   - {t: BSPC, s: DEL}
 combos:
 - p: [12, 11]
