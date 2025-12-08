@@ -33,7 +33,7 @@ layers:
   - .
   - '-'
   - .
-  - TAB
+  - '&key_repeat'
   - RET
   - {t: LSHFT, h: sticky}
   - {t: '&num_dance', h: Num}
@@ -136,13 +136,15 @@ combos:
   k: {t: ']', s: '}'}
 - p: [3, 2]
   k: '%'
+- p: [13, 12, 11]
+  k: TAB
 - p: [3, 13]
   k: +
 - p: [2, 12]
   k: ''''
 - p: [7, 17]
   k: '"'
-- p: [12, 17]
+- p: [13, 16]
   k: '&caps_word'
 - p: [2, 1]
   k: {t: '|', s: '&'}
