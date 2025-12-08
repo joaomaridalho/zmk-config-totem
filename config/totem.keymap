@@ -133,7 +133,7 @@ ZMK_MOD_MORPH(equal_percent,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 ZMK_MOD_MORPH(dollar_euro,
-    bindings= <&kp PT_DOLLAR>, <&kp LA(PT_E)>;
+    bindings= <&kp PT_DOLLAR>, <&kp RA(PT_E)>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
