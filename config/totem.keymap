@@ -147,7 +147,6 @@ ZMK_COMBO(rpar_gt, &rpar_gt, RM2 RM3,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(L
 ZMK_COMBO(lbkt_lbrc, &lbkt_lbrc, RB1 RB2,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST) 
 ZMK_COMBO(rbkt_rbrc, &rbkt_rbrc, RB2 RB3,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST) 
 ZMK_COMBO(prcnt, &kp PT_PRCNT, LT1 LT2) 
-ZMK_COMBO(tab, &kp PT_TAB, LM1 LM2 LM3) 
 ZMK_COMBO(plus, &kp PT_PLUS, LT1 LM1) 
 ZMK_COMBO(sqt, &kp PT_SQT, LT2 LM2)
 ZMK_COMBO(dqt, &kp PT_DQT, RT2 RM2)
@@ -171,7 +170,7 @@ ZMK_COMBO(acute_grave,&grave_hold PT_ACUTE 0, RT2 RT3)
 ZMK_BASE_LAYER(Base,
                      &kp PT_Q         &kp PT_W         &kp PT_E         &kp PT_R         &kp PT_T         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
                      &hml LGUI PT_A   &hml LALT PT_S   &hml LCTRL PT_D  &hml LSHIFT PT_F &kp PT_G         , &kp PT_H         &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA ,
-    &kp ESCAPE       &kp PT_Z         &kp PT_X         &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &kp PT_DOT ,
+    &kp ESCAPE       &kp PT_Z         &kp PT_X         &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &kp PT_TAB ,
                                                        &key_repeat      &kp RET          &qsk LSHFT       , SMART_NUM        &kp SPACE        &bs_del 
 )
 ZMK_BASE_LAYER(Colemak,
