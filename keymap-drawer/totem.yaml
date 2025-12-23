@@ -32,13 +32,13 @@ layers:
   - ','
   - .
   - '-'
-  - TAB
   - {t: BSPC, s: DEL}
-  - SPACE
+  - TAB
   - RET
-  - {t: '&num_dance', h: Num}
-  - {t: LSHFT, h: sticky}
   - '&key_repeat'
+  - {t: '&num_dance', h: Num}
+  - SPACE
+  - {t: LSHFT, h: sticky}
   Colemak:
   - Q
   - W
@@ -71,7 +71,7 @@ layers:
   - ','
   - .
   - '-'
-  - ''''
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -110,13 +110,13 @@ layers:
   - {t: RCTRL, h: sticky}
   - {t: RALT, h: sticky}
   - {t: RGUI, h: sticky}
-  - ''
+  - {t: ▽, type: trans}
   - .
   - RET
   - '0'
   - {t: CANCEL, type: held}
-  - SPACE
-  - {t: BSPC, s: DEL}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [12, 11]
   k: {t: '?', h: Sft+LALT, s: '!'}
