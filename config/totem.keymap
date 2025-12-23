@@ -170,18 +170,18 @@ ZMK_COMBO(acute_grave,&grave_hold PT_ACUTE 0, RT2 RT3)
 ZMK_BASE_LAYER(Base,
                      &kp PT_Q         &kp PT_W         &kp PT_E         &kp PT_R         &kp PT_T         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
                      &hml LGUI PT_A   &hml LALT PT_S   &hml LCTRL PT_D  &hml LSHIFT PT_F &kp PT_G         , &kp PT_H         &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA ,
-    &kp ESCAPE       &kp PT_Z         &kp PT_X         &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &kp TAB ,
-                                                       &bs_del          &kp SPACE        &kp RET          , SMART_NUM        &qsk LSHFT       &key_repeat 
+    &kp ESCAPE       &kp PT_Z         &kp PT_X         &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &bs_del ,
+                                                       &kp TAB          &kp RET          &key_repeat      , SMART_NUM        &kp SPACE        &qsk LSHFT 
 )
 ZMK_BASE_LAYER(Colemak,
                      &kp PT_Q         &kp PT_W         &kp PT_F         &kp PT_P         &kp PT_B         , &kp PT_J         &kp PT_L         &kp PT_U         &kp PT_Y        &kp PT_C_CEDILLA,
                      &hml LGUI PT_A   &hml LALT PT_R   &hml LCTRL PT_S  &hml LSHIFT PT_T &kp PT_G         , &kp PT_M         &hmr RSHFT PT_N  &hmr RCTRL PT_E  &hmr LALT PT_I  &hmr RGUI PT_O,
-    &kp ESCAPE       &kp PT_Z         &kp PT_X         &kp PT_C         &kp PT_D         &kp PT_V         , &kp PT_K         &kp PT_H         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &kp APOSTROPHE ,
+    &kp ESCAPE       &kp PT_Z         &kp PT_X         &kp PT_C         &kp PT_D         &kp PT_V         , &kp PT_K         &kp PT_H         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &trans,
                                                        &trans           &trans           &trans           , &trans           &trans           &trans
 )
 ZMK_BASE_LAYER(Num,
                      &kp PT_SLASH     &kp PT_N7        &kp PT_N8        &kp PT_N9        &kp PT_MINUS     , &none            &kp RC(PT_D)     &kp RC(PT_U)     &none           &tog COLEMAK,
                      &kp PT_ASTERISK  &kp PT_N4        &kp PT_N5        &kp PT_N6        &kp PT_PLUS      , &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT       &none ,
-    &kp K_CANCEL     &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &sk LSHIFT       &sk RCTRL        &sk RALT        &sk RGUI    &none ,
-                                                       &kp PT_DOT       &kp RET          &kp PT_N0        , &kp K_CANCEL      &kp SPACE        &bs_del
+    &kp K_CANCEL     &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &sk LSHIFT       &sk RCTRL        &sk RALT        &sk RGUI    &trans ,
+                                                       &kp PT_DOT       &kp RET          &kp PT_N0        , &kp K_CANCEL     &trans           &trans
 )
