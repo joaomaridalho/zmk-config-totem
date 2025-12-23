@@ -33,12 +33,12 @@ layers:
   - .
   - '-'
   - TAB
-  - '&key_repeat'
-  - RET
-  - {t: LSHFT, h: sticky}
-  - {t: '&num_dance', h: Num}
-  - SPACE
   - {t: BSPC, s: DEL}
+  - SPACE
+  - RET
+  - {t: '&num_dance', h: Num}
+  - {t: LSHFT, h: sticky}
+  - '&key_repeat'
   Colemak:
   - Q
   - W
@@ -72,12 +72,12 @@ layers:
   - .
   - '-'
   - ''''
-  - {t: DEL, h: LCTRL}
-  - {t: RET, h: Num}
-  - RET
-  - SPACE
-  - {t: SPACE, h: Num}
-  - '-'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Num:
   - /
   - '7'
@@ -99,7 +99,7 @@ layers:
   - UP
   - RIGHT
   - ''
-  - ESCAPE
+  - CANCEL
   - ','
   - '1'
   - '2'
