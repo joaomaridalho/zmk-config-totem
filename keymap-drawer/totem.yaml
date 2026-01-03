@@ -114,9 +114,9 @@ layers:
   - .
   - RET
   - '0'
-  - {type: held}
+  - {t: CANCEL, type: held}
   - {t: ▽, type: trans}
-  - CANCEL
+  - {t: ▽, type: trans}
 combos:
 - p: [12, 11]
   k: {t: '?', h: Sft+LALT, s: '!'}
