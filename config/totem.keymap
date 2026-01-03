@@ -183,5 +183,5 @@ ZMK_BASE_LAYER(Num,
                      &kp PT_SLASH     &kp PT_N7        &kp PT_N8        &kp PT_N9        &kp PT_MINUS     , &none            &kp RC(PT_D)     &kp RC(PT_U)     &none           &tog COLEMAK,
                      &kp PT_ASTERISK  &kp PT_N4        &kp PT_N5        &kp PT_N6        &kp PT_PLUS      , &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT       &none ,
     &kp K_CANCEL     &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &sk LSHIFT       &sk RCTRL        &sk RALT        &sk RGUI    &trans ,
-                                                       &kp PT_DOT       &kp RET          &kp PT_N0        , &trans           &trans           &kp K_CANCEL
+                                                       &kp PT_DOT       &kp RET          &kp PT_N0        , &kp K_CANCEL     &trans           &trans
 )
