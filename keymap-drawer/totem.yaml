@@ -35,10 +35,10 @@ layers:
   - {t: BSPC, s: DEL}
   - TAB
   - RET
-  - '&key_repeat'
   - {t: LSHFT, h: sticky}
-  - SPACE
   - {t: '&num_dance', h: Num}
+  - SPACE
+  - '&key_repeat'
   Colemak:
   - Q
   - W
@@ -114,9 +114,9 @@ layers:
   - .
   - RET
   - '0'
+  - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: CANCEL, type: held}
+  - CANCEL
 combos:
 - p: [12, 11]
   k: {t: '?', h: Sft+LALT, s: '!'}
