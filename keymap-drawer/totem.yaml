@@ -35,7 +35,7 @@ layers:
   - {t: BSPC, s: DEL}
   - TAB
   - RET
-  - {t: LSHFT, h: sticky}
+  - '&magic_shift'
   - {t: '&num_dance', h: Num}
   - SPACE
   - '&key_repeat'
@@ -142,8 +142,6 @@ combos:
   k: ''''
 - p: [7, 17]
   k: '"'
-- p: [13, 16]
-  k: '&caps_word'
 - p: [2, 1]
   k: {t: '|', s: '&'}
 - p: [14, 13]
