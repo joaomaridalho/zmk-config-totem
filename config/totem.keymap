@@ -59,6 +59,11 @@ ZMK_STICKY_KEY(qsk,
         quick-release;
         ignore-modifiers;
 )
+ZMK_TAP_DANCE(
+		magic_shift,
+		   tapping-term-ms = <200>;
+    bindings = <&qsk LSHFT>, <&caps_word>;
+)
 
 ZMK_HOLD_TAP(grave_hold,
     bindings = <&kp>, <&grave_spc>; 
@@ -138,7 +143,7 @@ ZMK_MOD_MORPH(dollar_euro,
 )
 
 // Combos
-ZMK_COMBO(qrest_excl, &quest_excl, LM2 LM3,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(LALT), KEYS_R)
+ZMK_COMBO(qrest_excl, &quest_excl, LM2 LM3,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST, LS(LALT), KEYS_R)
 ZMK_COMBO(slash_bslash, &slash_bslash, LM1 LM2,ALL, COMBO_TERM_FAST, COMBO_IDLE_FAST, RS(LCTRL), KEYS_R)
 ZMK_COMBO(copy, &kp LC(PT_C), LB2 LB3)
 ZMK_COMBO(paste, &kp LC(PT_V), LB1 LB2)
@@ -150,7 +155,6 @@ ZMK_COMBO(prcnt, &kp PT_PRCNT, LT1 LT2)
 ZMK_COMBO(plus, &kp PT_PLUS, LT1 LM1) 
 ZMK_COMBO(sqt, &kp PT_SQT, LT2 LM2)
 ZMK_COMBO(dqt, &kp PT_DQT, RT2 RM2)
-ZMK_COMBO(caps_word, &caps_word, LM1 RM1)
 ZMK_COMBO(pipe_ampersand, &pipe_ampersand, LT2 LT3)
 ZMK_COMBO(dollar_euro, &dollar_euro, LM0 LM1)
 ZMK_COMBO(at_hash, &at_hash, RM0 RM1)
@@ -171,7 +175,7 @@ ZMK_BASE_LAYER(Base,
                      &kp PT_Q         &kp PT_W         &kp PT_E         &kp PT_R         &kp PT_T         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
                      &hml LGUI PT_A   &hml LALT PT_S   &hml LCTRL PT_D  &hml LSHIFT PT_F &kp PT_G         , &kp PT_H         &hmr RSHFT PT_J  &hmr RCTRL PT_K  &hmr LALT PT_L  &hmr RGUI PT_C_CEDILLA ,
     &kp ESCAPE       &kp PT_Z         &kp PT_X         &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &bs_del ,
-                                                       &kp TAB          &kp RET          &qsk LSHFT       , SMART_NUM        &kp SPACE        &key_repeat 
+                                                       &kp TAB          &kp RET          &magic_shift     , SMART_NUM        &kp SPACE        &key_repeat 
 )
 ZMK_BASE_LAYER(Colemak,
                      &kp PT_Q         &kp PT_W         &kp PT_F         &kp PT_P         &kp PT_B         , &kp PT_J         &kp PT_L         &kp PT_U         &kp PT_Y        &kp PT_C_CEDILLA,
