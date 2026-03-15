@@ -1,5 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <behaviors/num_word.dtsi>
 #ifndef KEYMAP_DRAWER
 #include "keys_pt.h"
@@ -23,6 +25,9 @@
 #define COLEMAK 1
 #define NUM 2
 #define SYM 3
+#define GAMING 4
+#define FUN 5
+#define GAME_PLUS 6
 
 #define QUICK_TAP_MS 175
 
