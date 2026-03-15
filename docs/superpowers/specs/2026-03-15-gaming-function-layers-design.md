@@ -96,7 +96,7 @@ F1–F9 mirror the numpad positions in the NUM layer exactly. F10/F11/F12 fill t
 | LT  | `F10` | `F7` | `F8` | `F9` | `F11` |
 | LM  | `F12` | `F4` | `F5` | `F6` | `&none` |
 | LB  | `K_CANCEL`(LB5) | `&none`(LB0) | `F1` | `F2` | `F3` | `&none`(LB4) |
-| LH  | `F10` | `Enter` | `F12` |
+| LH (LH2/LH1/LH0) | `F10` | `Enter` | `F12` (F10 also at LT0 — intentional duplicate for ergonomic reach) |
 
 ### Right hand — toggles & BT
 
