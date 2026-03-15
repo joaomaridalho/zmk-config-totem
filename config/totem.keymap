@@ -24,10 +24,9 @@
 #define BASE 0
 #define COLEMAK 1
 #define NUM 2
-#define SYM 3
-#define GAMING 4
+#define GAMING 3
+#define GAME_PLUS 4
 #define FUN 5
-#define GAME_PLUS 6
 
 #define QUICK_TAP_MS 175
 
