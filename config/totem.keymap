@@ -212,3 +212,9 @@ ZMK_LAYER(GamePlus,
     &trans           &trans           &trans           &trans           &trans           &trans           , &trans           &trans           &trans           &trans          &trans          &trans ,
                                                        &trans           &trans           &tog GAME_PLUS   , &trans           &trans           &trans
 )
+ZMK_LAYER(Fun,
+                     &kp F10          &kp F7           &kp F8           &kp F9           &kp F11          , &tog GAMING      &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2    &tog COLEMAK ,
+                     &kp F12          &kp F4           &kp F5           &kp F6           &none            , &out OUT_TOG     &bt BT_CLR       &none            &none           &none ,
+    &kp K_CANCEL     &none            &kp F1           &kp F2           &kp F3           &none            , &none            &sk LSHIFT       &sk RCTRL        &sk RALT        &sk RGUI        &none ,
+                                                       &kp F10          &kp RET          &kp F12          , &kp K_CANCEL     &trans           &trans
+)
