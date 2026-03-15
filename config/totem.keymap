@@ -206,3 +206,9 @@ ZMK_BASE_LAYER(Gaming,
     &kp ESCAPE       &kp LCTRL        &kp PT_A         &kp PT_S         &kp PT_D         &kp PT_F         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &bs_del ,
                                                        &kp SPACE        &kp RET          &tog GAME_PLUS   , &mo FUN          &kp SPACE        &key_repeat
 )
+ZMK_LAYER(GamePlus,
+                     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_N4        &kp PT_N5        , &trans           &trans           &trans           &trans          &trans ,
+                     &trans           &trans           &trans           &trans           &trans           , &trans           &trans           &trans           &trans          &trans ,
+    &trans           &trans           &trans           &trans           &trans           &trans           , &trans           &trans           &trans           &trans          &trans          &trans ,
+                                                       &trans           &trans           &tog GAME_PLUS   , &trans           &trans           &trans
+)
