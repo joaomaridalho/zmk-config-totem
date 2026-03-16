@@ -1,9 +1,9 @@
 include:
-  - board: xiao_ble/nrf52840/zmk
+  - board: xiao_ble
     shield: totem_left
-  - board: xiao_ble/nrf52840/zmk
+  - board: xiao_ble
     shield: totem_right
-  - board: xiao_ble/nrf52840/zmk
+  - board: xiao_ble
     shield: totem_dongle
-  - board: xiao_ble/nrf52840/zmk
+  - board: xiao_ble
     shield: settings_reset
