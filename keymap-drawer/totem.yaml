@@ -33,9 +33,9 @@ layers:
   - .
   - '-'
   - {t: BSPC, s: DEL}
-  - {t: TAB, h: Fun}
+  - TAB
   - RET
-  - '&magic_shift'
+  - {t: LSHFT, h: sticky}
   - {t: '&num_dance', h: Num}
   - SPACE
   - '&key_repeat'
@@ -72,7 +72,7 @@ layers:
   - .
   - '-'
   - {t: ▽, type: trans}
-  - {t: TAB, h: Fun}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -117,187 +117,50 @@ layers:
   - {t: CANCEL, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Gaming:
-  - TAB
-  - X
-  - C
-  - V
-  - B
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - LSHIFT
-  - Q
-  - W
-  - E
-  - R
-  - H
-  - J
-  - K
-  - L
-  - CEDILLA
-  - ESCAPE
-  - LCTRL
-  - A
-  - S
-  - D
-  - F
-  - N
-  - M
-  - ','
-  - .
-  - '-'
-  - {t: BSPC, s: DEL}
-  - SPACE
-  - RET
-  - {t: GamingPlus, h: toggle}
-  - Fun
-  - SPACE
-  - '&key_repeat'
-  GamingPlus:
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: GamingPlus, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Fun:
-  - F10
-  - F7
-  - F8
-  - F9
-  - F11
-  - {t: Gaming, h: toggle}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: Colemak, h: toggle}
-  - F12
-  - F4
-  - F5
-  - F6
-  - ''
-  - OUT TOG
-  - BT CLR
-  - ''
-  - ''
-  - ''
-  - CANCEL
-  - ''
-  - F1
-  - F2
-  - F3
-  - ''
-  - ''
-  - {t: LSHIFT, h: sticky}
-  - {t: RCTRL, h: sticky}
-  - {t: RALT, h: sticky}
-  - {t: RGUI, h: sticky}
-  - ''
-  - {t: F10, type: held}
-  - RET
-  - F12
-  - CANCEL
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
 combos:
 - p: [12, 11]
   k: {t: '?', h: Sft+LALT, s: '!'}
-  l: [Base, Colemak]
 - p: [13, 12]
   k: {t: /, h: Sft+LCTRL, s: \}
-  l: [Base, Colemak]
 - p: [23, 22]
   k: Ctl+C
-  l: [Base, Colemak]
 - p: [24, 23]
   k: Ctl+V
-  l: [Base, Colemak]
 - p: [16, 17]
   k: {t: (, h: Sft+LCTRL, s: <}
-  l: [Base, Colemak]
 - p: [17, 18]
   k: {t: ), h: Sft+LALT, s: '>'}
-  l: [Base, Colemak]
 - p: [27, 28]
   k: {t: '[', s: '{'}
-  l: [Base, Colemak]
 - p: [28, 29]
   k: {t: ']', s: '}'}
-  l: [Base, Colemak]
 - p: [3, 2]
   k: '%'
-  l: [Base, Colemak]
 - p: [3, 13]
   k: +
-  l: [Base, Colemak]
 - p: [2, 12]
   k: ''''
-  l: [Base, Colemak]
 - p: [7, 17]
   k: '"'
-  l: [Base, Colemak]
+- p: [13, 16]
+  k: '&caps_word'
 - p: [2, 1]
   k: {t: '|', s: '&'}
-  l: [Base, Colemak]
 - p: [14, 13]
   k: {t: $, s: AltGr+E}
-  l: [Base, Colemak]
 - p: [15, 16]
   k: {t: '@', s: '#'}
-  l: [Base, Colemak]
 - p: [5, 6]
   k: ORDM
-  l: [Base, Colemak]
 - p: [6, 7]
   k: '~'
-  l: [Base, Colemak]
 - p: [6, 16]
   k: <
-  l: [Base, Colemak]
 - p: [8, 18]
   k: '>'
-  l: [Base, Colemak]
 - p: [16, 27]
   k: '{'
-  l: [Base, Colemak]
 - p: [18, 29]
   k: '}'
-  l: [Base, Colemak]
 - p: [7, 8]
   k: {t: '&grave_spc', h: ACUTE}
-  l: [Base, Colemak]
