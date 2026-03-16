@@ -201,14 +201,12 @@ ZMK_BASE_LAYER(Gaming,
 )
 
 ZMK_BASE_LAYER(GamingPlus,
-                     &kp TAB          &kp PT_X         &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
-(GamePlus,
                      &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_N4        &kp PT_N5        , &trans           &trans           &trans           &trans          &trans ,
                      &trans           &trans           &trans           &trans           &trans           , &trans           &trans           &trans           &trans          &trans ,
     &trans           &trans           &trans           &trans           &trans           &trans           , &trans           &trans           &trans           &trans          &trans          &trans ,
                                                        &trans           &trans           &tog GAME_PLUS   , &trans           &trans           &trans
 )
-ZMK_LAYER(Fun,
+ZMK_BASE_LAYER(Fun,
                      &kp F10          &kp F7           &kp F8           &kp F9           &kp F11          , &tog GAMING      &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2    &tog COLEMAK ,
                      &kp F12          &kp F4           &kp F5           &kp F6           &none            , &out OUT_TOG     &bt BT_CLR       &none            &none           &none ,
     &kp K_CANCEL     &none            &kp F1           &kp F2           &kp F3           &none            , &none            &sk LSHIFT       &sk RCTRL        &sk RALT        &sk RGUI        &none ,
