@@ -117,6 +117,84 @@ layers:
   - {t: CANCEL, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  Gaming:
+  - TAB
+  - Q
+  - R
+  - E
+  - B
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - LSHIFT
+  - A
+  - W
+  - D
+  - F
+  - H
+  - J
+  - K
+  - L
+  - CEDILLA
+  - ESCAPE
+  - LCTRL
+  - C
+  - S
+  - X
+  - Z
+  - N
+  - M
+  - ','
+  - .
+  - '-'
+  - {t: BSPC, s: DEL}
+  - {t: GamePlus, h: sticky}
+  - RET
+  - SPACE
+  - Fun
+  - SPACE
+  - '&key_repeat'
+  GamePlus:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - M
+  - I
+  - G
+  - T
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: GamePlus, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Fun:
   - F10
   - F7
@@ -154,84 +232,6 @@ layers:
   - RET
   - F12
   - CANCEL
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  Gaming:
-  - TAB
-  - X
-  - C
-  - V
-  - B
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - LSHIFT
-  - Q
-  - W
-  - E
-  - R
-  - H
-  - J
-  - K
-  - L
-  - CEDILLA
-  - ESCAPE
-  - LCTRL
-  - A
-  - S
-  - D
-  - F
-  - N
-  - M
-  - ','
-  - .
-  - '-'
-  - {t: BSPC, s: DEL}
-  - SPACE
-  - RET
-  - {t: GamePlus, h: toggle}
-  - Fun
-  - SPACE
-  - '&key_repeat'
-  GamePlus:
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: GamePlus, h: toggle}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
