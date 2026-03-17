@@ -139,7 +139,7 @@ layers:
   - L
   - CEDILLA
   - ESCAPE
-  - LCTRL
+  - {t: GamePlus, h: sticky}
   - C
   - S
   - X
@@ -150,8 +150,8 @@ layers:
   - .
   - '-'
   - {t: BSPC, s: DEL}
-  - {t: GamePlus, h: sticky}
   - RET
+  - LCTRL
   - SPACE
   - Fun
   - SPACE
@@ -178,18 +178,18 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: GamePlus, h: toggle}
   - {t: ▽, type: trans}
