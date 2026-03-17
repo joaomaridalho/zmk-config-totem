@@ -194,9 +194,9 @@ ZMK_BASE_LAYER(Num,
                                                        &kp PT_DOT       &kp RET          &kp PT_N0        , &kp K_CANCEL     &trans           &trans
 )
 ZMK_BASE_LAYER(Gaming,
-                     &kp TAB          &kp PT_Q         &kp PT_R         &kp PT_E         &kp PT_B         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
+                     &sl GAME_PLUS    &kp PT_Q         &kp PT_R         &kp PT_E         &kp PT_B         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
                      &kp LSHIFT       &kp PT_A         &kp PT_W         &kp PT_D         &kp PT_F         , &kp PT_H         &kp PT_J         &kp PT_K         &kp PT_L        &kp PT_C_CEDILLA ,
-    &kp ESCAPE       &sl GAME_PLUS    &kp PT_C         &kp PT_S         &kp PT_X         &kp PT_Z         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &bs_del ,
+    &kp ESCAPE       &kp TAB          &kp PT_C         &kp PT_S         &kp PT_X         &kp PT_Z         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &bs_del ,
                                                        &kp RET          &kp LCTRL        &kp SPACE        , &mo FUN          &kp SPACE        &key_repeat
 
 )
