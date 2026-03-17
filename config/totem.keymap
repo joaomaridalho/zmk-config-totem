@@ -195,14 +195,15 @@ ZMK_BASE_LAYER(Num,
                                                        &kp PT_DOT       &kp RET          &kp PT_N0        , &kp K_CANCEL     &trans           &trans
 )
 ZMK_BASE_LAYER(Gaming,
-                     &kp TAB          &kp PT_X         &kp PT_C         &kp PT_V         &kp PT_B         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
-                     &kp LSHIFT       &kp PT_Q         &kp PT_W         &kp PT_E         &kp PT_R         , &kp PT_H         &kp PT_J         &kp PT_K         &kp PT_L        &kp PT_C_CEDILLA ,
-    &kp ESCAPE       &kp LCTRL        &kp PT_A         &kp PT_S         &kp PT_D         &kp PT_F         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &bs_del ,
-                                                       &kp SPACE        &kp RET          &tog GAME_PLUS   , &mo FUN          &kp SPACE        &key_repeat
+                     &kp TAB          &kp PT_Q         &kp PT_R         &kp PT_E         &kp PT_B         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
+                     &kp LSHIFT       &kp PT_A         &kp PT_W         &kp PT_D         &kp PT_F         , &kp PT_H         &kp PT_J         &kp PT_K         &kp PT_L        &kp PT_C_CEDILLA ,
+    &kp ESCAPE       &kp LCTRL        &kp PT_C         &kp PT_S         &kp PT_X         &kp PT_Z         , &kp PT_N         &kp PT_M         &kp PT_COMMA     &kp PT_DOT      &kp PT_MINUS    &bs_del ,
+                                                       &sl GAME_PLUS    &kp RET          &kp SPACE        , &mo FUN          &kp SPACE        &key_repeat
+
 )
 ZMK_BASE_LAYER(GamePlus,
                      &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_N4        &kp PT_N5        , &trans           &trans           &trans           &trans          &trans ,
-                     &trans           &trans           &trans           &trans           &trans           , &trans           &trans           &trans           &trans          &trans ,
+                     &kp PT_M         &kp PT_I         &kp PT_G         &kp PT_T         &trans           , &trans           &trans           &trans           &trans          &trans ,
     &trans           &trans           &trans           &trans           &trans           &trans           , &trans           &trans           &trans           &trans          &trans          &trans ,
                                                        &trans           &trans           &tog GAME_PLUS   , &trans           &trans           &trans
 )
