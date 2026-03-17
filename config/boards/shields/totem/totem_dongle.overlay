@@ -19,3 +19,7 @@
         events = <0>;
     };
 };
+
+&default_layout {
+    kscan = <&mock_kscan>;
+};
