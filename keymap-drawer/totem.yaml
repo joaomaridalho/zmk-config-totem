@@ -118,7 +118,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Gaming:
-  - TAB
+  - {t: GamePlus, h: sticky}
   - Q
   - R
   - E
@@ -139,7 +139,7 @@ layers:
   - L
   - CEDILLA
   - ESCAPE
-  - {t: GamePlus, h: sticky}
+  - TAB
   - C
   - S
   - X
@@ -157,7 +157,7 @@ layers:
   - SPACE
   - '&key_repeat'
   GamePlus:
-  - '1'
+  - {t: '1', type: held}
   - '2'
   - '3'
   - '4'
@@ -178,7 +178,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
