@@ -9,6 +9,8 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
+        /delete-property/ zephyr,console;
+        /delete-property/ zephyr,shell-uart;
     };
 
     mock_kscan: kscan_1 {
