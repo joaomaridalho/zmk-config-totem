@@ -271,9 +271,6 @@ combos:
 - p: [7, 17]
   k: '"'
   l: [Base, Colemak]
-- p: [13, 16]
-  k: '&caps_word'
-  l: [Base, Colemak]
 - p: [2, 1]
   k: {t: '|', s: '&'}
   l: [Base, Colemak]
