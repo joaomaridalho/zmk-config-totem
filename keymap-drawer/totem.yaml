@@ -117,6 +117,84 @@ layers:
   - {t: CANCEL, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  Gaming:
+  - {t: GamePlus, h: sticky}
+  - Q
+  - R
+  - E
+  - B
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - LSHIFT
+  - A
+  - W
+  - D
+  - F
+  - H
+  - J
+  - K
+  - L
+  - CEDILLA
+  - ESCAPE
+  - TAB
+  - C
+  - S
+  - X
+  - Z
+  - N
+  - M
+  - ','
+  - .
+  - '-'
+  - {t: BSPC, s: DEL}
+  - RET
+  - LCTRL
+  - SPACE
+  - Fun
+  - SPACE
+  - '&key_repeat'
+  GamePlus:
+  - {t: '1', type: held}
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - M
+  - I
+  - G
+  - T
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: GamePlus, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   Fun:
   - F10
   - F7
@@ -156,84 +234,6 @@ layers:
   - CANCEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  Gaming:
-  - TAB
-  - X
-  - C
-  - V
-  - B
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - LSHIFT
-  - Q
-  - W
-  - E
-  - R
-  - H
-  - J
-  - K
-  - L
-  - CEDILLA
-  - ESCAPE
-  - LCTRL
-  - A
-  - S
-  - D
-  - F
-  - N
-  - M
-  - ','
-  - .
-  - '-'
-  - {t: BSPC, s: DEL}
-  - SPACE
-  - RET
-  - {t: GamePlus, h: toggle}
-  - Fun
-  - SPACE
-  - '&key_repeat'
-  GamePlus:
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: GamePlus, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
 combos:
 - p: [12, 11]
   k: {t: '?', h: Sft+LALT, s: '!'}
@@ -270,9 +270,6 @@ combos:
   l: [Base, Colemak]
 - p: [7, 17]
   k: '"'
-  l: [Base, Colemak]
-- p: [13, 16]
-  k: '&caps_word'
   l: [Base, Colemak]
 - p: [2, 1]
   k: {t: '|', s: '&'}
