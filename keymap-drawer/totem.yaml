@@ -193,6 +193,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: GamePlus, h: toggle}
   - {t: ▽, type: trans}
+  - {t: GamePlus, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Fun:
