@@ -203,7 +203,7 @@ ZMK_BASE_LAYER(Gaming,
 ZMK_BASE_LAYER(GamePlus,
                      &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_N4        &kp PT_N5        , &trans           &trans           &trans           &trans          &trans ,
                      &kp PT_M         &kp PT_I         &kp PT_G         &kp PT_B         &kp PT_V         , &trans           &trans           &trans           &trans          &trans ,
-    &trans           &trans           &trans           &trans           &trans           &trans           , &trans           &trans           &trans           &trans          &trans          &trans ,
+    &trans           &kp PT_Z         &trans           &trans           &trans           &trans           , &trans           &trans           &trans           &trans          &trans          &trans ,
                                                        &trans           &trans           &tog GAME_PLUS   , &trans           &trans           &trans
 )
 ZMK_BASE_LAYER(Fun,
