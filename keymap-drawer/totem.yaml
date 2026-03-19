@@ -178,7 +178,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Z
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -193,7 +193,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: GamePlus, h: toggle}
   - {t: ▽, type: trans}
-  - {t: GamePlus, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Fun:
