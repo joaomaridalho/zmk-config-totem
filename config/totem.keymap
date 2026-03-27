@@ -64,11 +64,9 @@ ZMK_STICKY_KEY(qsk,
         ignore-modifiers;
 )
 
-ZMK_HOLD_TAP(grave_hold,
-    bindings = <&kp>, <&grave_spc>;
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
+ZMK_MOD_MORPH(acute_grave_mm,
+    bindings = <&kp PT_ACUTE>, <&grave_spc>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
 #define SMART_NUM &smart_num NUM 0
@@ -168,7 +166,7 @@ ZMK_COMBO(lt, &kp PT_LT, RT1 RM1, BASE COLEMAK)
 ZMK_COMBO(gt, &kp PT_GT, RT3 RM3, BASE COLEMAK)
 ZMK_COMBO(lbrc, &kp PT_LBRC, RM1 RB1, BASE COLEMAK)
 ZMK_COMBO(rbrc, &kp PT_RBRC, RM3 RB3, BASE COLEMAK)
-ZMK_COMBO(acute_grave, &grave_hold PT_ACUTE 0, RT2 RT3, BASE COLEMAK)
+ZMK_COMBO(acute_grave, &acute_grave_mm, RT2 RT3, BASE COLEMAK)
 
 #ifndef ZMK_BASE_LAYER
   #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
