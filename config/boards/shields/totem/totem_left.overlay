@@ -6,6 +6,11 @@
 
  #include "totem.dtsi"
 
+/* Define xiao_i2c label and disable I2C: D4/D5 (SDA/SCL) are used as kscan columns. */
+xiao_i2c: &i2c0 {
+    status = "disabled";
+};
+
  &kscan0 {
     compatible = "zmk,kscan-gpio-matrix";
     wakeup-source;

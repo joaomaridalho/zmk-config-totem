@@ -30,9 +30,11 @@
     status = "okay";
 };
 
-&xiao_i2c {
+/* xiao_i2c is not defined in xiao_ble/nrf52840/zmk board DTS; define it here
+ * as I2C0 (SDA=D4/P0.26, SCL=D5/P0.27) for the dongle OLED display. */
+xiao_i2c: &i2c0 {
     status = "okay";
-    
+
     oled: ssd1306@3c {
         compatible = "sinowealth,sh1106";
         reg = <0x3c>;
