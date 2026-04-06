@@ -9,6 +9,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
+        zephyr,display = &oled;
         zephyr,console = &uart0;
         zephyr,shell-uart = &uart0;
     };
@@ -30,9 +31,8 @@
     status = "okay";
 };
 
-/* xiao_i2c is not defined in xiao_ble/nrf52840/zmk board DTS; define it here
- * as I2C0 (SDA=D4/P0.26, SCL=D5/P0.27) for the dongle OLED display. */
-xiao_i2c: &i2c0 {
+/* nice!nano exposes pro_micro_i2c for the Arduino I2C pins (SDA=D2, SCL=D3). */
+&pro_micro_i2c {
     status = "okay";
 
     oled: ssd1306@3c {
