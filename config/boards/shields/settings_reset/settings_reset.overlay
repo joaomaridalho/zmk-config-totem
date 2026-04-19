@@ -1,0 +1,8 @@
+/*
+ * xiao_i2c is not defined in the xiao_ble/nrf52840/zmk board DTS.
+ * Define it here (pointing to I2C0) and disable it — settings_reset
+ * has no display and does not use I2C.
+ */
+xiao_i2c: &i2c0 {
+    status = "disabled";
+};

@@ -64,11 +64,19 @@ ZMK_STICKY_KEY(qsk,
         ignore-modifiers;
 )
 
-ZMK_HOLD_TAP(grave_hold,
-    bindings = <&kp>, <&grave_spc>;
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
+// Accent macros: release any active shift before sending the accent key,
+// since PT_GRAVE = LS(PT_ACUTE) on Portuguese layout. Without this, sticky
+// shift from magic_shift would turn acute into grave.
+ZMK_MACRO(acute_macro,
+    bindings = <&macro_release &kp LSHFT &kp RSHFT &macro_tap &kp PT_ACUTE>;
+    wait-ms = <0>;
+    tap-ms = <5>;
+)
+
+ZMK_MACRO(grave_macro,
+    bindings = <&macro_release &kp LSHFT &kp RSHFT &macro_tap &kp PT_GRAVE &kp PT_SPACE>;
+    wait-ms = <0>;
+    tap-ms = <5>;
 )
 
 #define SMART_NUM &smart_num NUM 0
@@ -89,10 +97,6 @@ ZMK_TAP_DANCE(magic_shift,
 )
 
 // Macros
-ZMK_MACRO(grave_spc,
-    bindings = <&kp PT_GRAVE &kp PT_SPACE>;
-    wait-ms = <0>;
-    tap-ms = <5>;)
 // MOD MORPHS
 ZMK_MOD_MORPH(bs_del,
     bindings = <&kp BSPC>, <&kp DEL>;
@@ -168,7 +172,8 @@ ZMK_COMBO(lt, &kp PT_LT, RT1 RM1, BASE COLEMAK)
 ZMK_COMBO(gt, &kp PT_GT, RT3 RM3, BASE COLEMAK)
 ZMK_COMBO(lbrc, &kp PT_LBRC, RM1 RB1, BASE COLEMAK)
 ZMK_COMBO(rbrc, &kp PT_RBRC, RM3 RB3, BASE COLEMAK)
-ZMK_COMBO(acute_grave, &grave_hold PT_ACUTE 0, RT2 RT3, BASE COLEMAK)
+ZMK_COMBO(acute, &acute_macro, RT2 RT3, BASE COLEMAK)
+ZMK_COMBO(grave, &grave_macro, RT3 RT4, BASE COLEMAK)
 
 #ifndef ZMK_BASE_LAYER
   #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \

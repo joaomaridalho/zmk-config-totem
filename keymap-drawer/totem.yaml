@@ -299,5 +299,8 @@ combos:
   k: '}'
   l: [Base, Colemak]
 - p: [7, 8]
-  k: {t: '&grave_spc', h: ACUTE}
+  k: '&acute_macro'
+  l: [Base, Colemak]
+- p: [8, 9]
+  k: '&grave_macro'
   l: [Base, Colemak]

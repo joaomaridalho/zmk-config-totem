@@ -9,6 +9,7 @@
 / {
     chosen {
         zmk,kscan = &mock_kscan;
+        zephyr,display = &oled;
         zephyr,console = &uart0;
         zephyr,shell-uart = &uart0;
     };
@@ -28,4 +29,24 @@
 /* Re-enable hardware UART so uart_console has a valid device when CDC ACM is disabled */
 &uart0 {
     status = "okay";
+};
+
+/* nice!nano exposes pro_micro_i2c for the Arduino I2C pins (SDA=D2, SCL=D3). */
+&pro_micro_i2c {
+    status = "okay";
+
+    oled: ssd1306@3c {
+        compatible = "sinowealth,sh1106";
+        reg = <0x3c>;
+        width = <128>;
+        height = <64>;
+        segment-offset = <2>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+        segment-remap;
+        com-invdir;
+        inversion-on;
+        prechargep = <0x22>;
+    };
 };
