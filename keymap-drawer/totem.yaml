@@ -11,27 +11,27 @@ layers:
   - I
   - O
   - P
-  - {t: A, h: LALT}
-  - {t: S, h: LCTRL}
-  - {t: D, h: LGUI}
-  - {t: F, h: LSHIFT}
+  - A
+  - S
+  - D
+  - F
   - G
   - H
-  - {t: J, h: RSHFT}
-  - {t: K, h: RGUI}
-  - {t: L, h: RCTRL}
-  - {t: CEDILLA, h: LALT}
+  - J
+  - K
+  - L
+  - CEDILLA
   - ESCAPE
-  - Z
-  - X
-  - C
-  - V
+  - {t: Z, h: LALT}
+  - {t: X, h: LCTRL}
+  - {t: C, h: LGUI}
+  - {t: V, h: LSHIFT}
   - B
   - N
-  - M
-  - ','
-  - .
-  - '-'
+  - {t: M, h: RSHFT}
+  - {t: ',', h: RGUI}
+  - {t: ., h: RCTRL}
+  - {t: '-', h: LALT}
   - {t: BSPC, s: DEL}
   - {t: TAB, h: Fun}
   - RET
@@ -50,27 +50,27 @@ layers:
   - U
   - Y
   - CEDILLA
-  - {t: A, h: LALT}
-  - {t: R, h: LCTRL}
-  - {t: S, h: LGUI}
-  - {t: T, h: LSHIFT}
+  - A
+  - R
+  - S
+  - T
   - G
   - M
-  - {t: N, h: RSHFT}
-  - {t: E, h: RGUI}
-  - {t: I, h: RCTRL}
-  - {t: O, h: LALT}
+  - N
+  - E
+  - I
+  - O
   - ESCAPE
-  - Z
-  - X
-  - C
-  - D
+  - {t: Z, h: LALT}
+  - {t: X, h: LCTRL}
+  - {t: C, h: LGUI}
+  - {t: D, h: LSHIFT}
   - V
   - K
-  - H
-  - ','
-  - .
-  - '-'
+  - {t: H, h: RSHFT}
+  - {t: ',', h: RGUI}
+  - {t: ., h: RCTRL}
+  - {t: '-', h: LALT}
   - {t: ▽, type: trans}
   - {t: TAB, h: Fun}
   - {t: ▽, type: trans}
