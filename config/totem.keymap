@@ -64,48 +64,24 @@ ZMK_STICKY_KEY(qsk,
         ignore-modifiers;
 )
 
-// Accent combo (RT2 + RT3): tap = acute/grave dead key, hold = dead key + space.
-// When shift is active we release it before sending the accent so sticky mods
-// don't get stuck. PT_GRAVE already encodes shift in its HID report, so the
-// grave character is still produced correctly.
-ZMK_MACRO(acute_tap_no_shift,
+// Accent combo (RT2 + RT3): tap = acute dead key, hold = acute + space.
+// If shift is active the OS turns acute -> grave (Portuguese layout).
+// Sticky shift is consumed automatically by the keypress — no macro_release
+// needed, so physically held shift is never desynced.
+ZMK_MACRO(acute_tap,
     bindings = <&macro_tap &kp PT_ACUTE>;
     wait-ms = <0>;
     tap-ms = <5>;
 )
 
-ZMK_MACRO(grave_tap_release_shift,
-    bindings = <&macro_release &kp LSHFT &kp RSHFT
-                &macro_tap &kp PT_GRAVE>;
-    wait-ms = <0>;
-    tap-ms = <5>;
-)
-
-ZMK_MACRO(acute_spc_no_shift,
+ZMK_MACRO(acute_spc,
     bindings = <&macro_tap &kp PT_ACUTE &kp PT_SPACE>;
     wait-ms = <0>;
     tap-ms = <5>;
 )
 
-ZMK_MACRO(grave_spc_release_shift,
-    bindings = <&macro_release &kp LSHFT &kp RSHFT
-                &macro_tap &kp PT_GRAVE &kp PT_SPACE>;
-    wait-ms = <0>;
-    tap-ms = <5>;
-)
-
-ZMK_MOD_MORPH(acute_tap_morph,
-    bindings = <&acute_tap_no_shift>, <&grave_tap_release_shift>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-ZMK_MOD_MORPH(acute_spc_morph,
-    bindings = <&acute_spc_no_shift>, <&grave_spc_release_shift>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
 ZMK_HOLD_TAP(acute_combo_ht,
-    bindings = <&acute_spc_morph>, <&acute_tap_morph>;
+    bindings = <&acute_spc>, <&acute_tap>;
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
     quick-tap-ms = <100>;
@@ -204,7 +180,7 @@ ZMK_COMBO(lt, &kp PT_LT, RT1 RM1, BASE COLEMAK)
 ZMK_COMBO(gt, &kp PT_GT, RT3 RM3, BASE COLEMAK)
 ZMK_COMBO(lbrc, &kp PT_LBRC, RM1 RB1, BASE COLEMAK)
 ZMK_COMBO(rbrc, &kp PT_RBRC, RM3 RB3, BASE COLEMAK)
-ZMK_COMBO(acute, &acute_combo_ht &acute_spc_morph &acute_tap_morph, RT2 RT3, BASE COLEMAK)
+ZMK_COMBO(acute, &acute_combo_ht &acute_spc &acute_tap, RT2 RT3, BASE COLEMAK)
 
 #ifndef ZMK_BASE_LAYER
   #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
