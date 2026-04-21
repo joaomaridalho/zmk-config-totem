@@ -78,18 +78,12 @@ ZMK_MOD_MORPH(acute_tap_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
-/ {
-    behaviors {
-        acute_combo_ht: acute_combo_ht {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <100>;
-            bindings = <&acute_spc>, <&acute_tap_morph>;
-        };
-    };
-};
+ZMK_HOLD_TAP(acute_combo_ht,
+    bindings = <&acute_spc>, <&acute_tap_morph>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <100>;
+)
 
 #define SMART_NUM &smart_num NUM 0
 ZMK_HOLD_TAP(smart_num,
@@ -184,7 +178,7 @@ ZMK_COMBO(lt, &kp PT_LT, RT1 RM1, BASE COLEMAK)
 ZMK_COMBO(gt, &kp PT_GT, RT3 RM3, BASE COLEMAK)
 ZMK_COMBO(lbrc, &kp PT_LBRC, RM1 RB1, BASE COLEMAK)
 ZMK_COMBO(rbrc, &kp PT_RBRC, RM3 RB3, BASE COLEMAK)
-ZMK_COMBO(acute, &acute_combo_ht, RT2 RT3, BASE COLEMAK)
+ZMK_COMBO(acute, &acute_combo_ht &acute_spc &acute_tap_morph, RT2 RT3, BASE COLEMAK)
 
 #ifndef ZMK_BASE_LAYER
   #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
