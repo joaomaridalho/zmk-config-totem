@@ -64,25 +64,32 @@ ZMK_STICKY_KEY(qsk,
         ignore-modifiers;
 )
 
-// Accent macros: release any active shift before sending the accent key,
-// since PT_GRAVE = LS(PT_ACUTE) on Portuguese layout. Without this, sticky
-// shift from magic_shift would turn acute into grave.
-//
-// unshift_tap: parameterized helper — releases LSHFT/RSHFT then taps the
-// given key. Used directly for acute; grave_macro wraps it and appends a
-// space to commit the dead key as a standalone bare grave.
-ZMK_MACRO_ONE_PARAM(unshift_tap,
-    bindings = <&macro_release &kp LSHFT &kp RSHFT
-                &macro_tap &kp MACRO_PLACEHOLDER>;
+// Accent combo (RT2 + RT3): tap = acute/grave dead key, hold = dead key + space.
+// Shift is NOT released so the OS applies Portuguese layout rules naturally
+// (shift + acute → grave).
+ZMK_MACRO(acute_spc,
+    bindings = <&macro_tap &kp PT_ACUTE &kp PT_SPACE>;
     wait-ms = <0>;
     tap-ms = <5>;
 )
 
-ZMK_MACRO(grave_macro,
-    bindings = <&unshift_tap PT_GRAVE &kp PT_SPACE>;
-    wait-ms = <0>;
-    tap-ms = <5>;
+ZMK_MOD_MORPH(acute_tap_morph,
+    bindings = <&kp PT_ACUTE>, <&kp PT_GRAVE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
 )
+
+/ {
+    behaviors {
+        acute_combo_ht: acute_combo_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <100>;
+            bindings = <&acute_spc>, <&acute_tap_morph>;
+        };
+    };
+};
 
 #define SMART_NUM &smart_num NUM 0
 ZMK_HOLD_TAP(smart_num,
@@ -177,8 +184,7 @@ ZMK_COMBO(lt, &kp PT_LT, RT1 RM1, BASE COLEMAK)
 ZMK_COMBO(gt, &kp PT_GT, RT3 RM3, BASE COLEMAK)
 ZMK_COMBO(lbrc, &kp PT_LBRC, RM1 RB1, BASE COLEMAK)
 ZMK_COMBO(rbrc, &kp PT_RBRC, RM3 RB3, BASE COLEMAK)
-ZMK_COMBO(acute, &unshift_tap PT_ACUTE, RT2 RT3, BASE COLEMAK)
-ZMK_COMBO(grave, &grave_macro, RT3 RT4, BASE COLEMAK)
+ZMK_COMBO(acute, &acute_combo_ht, RT2 RT3, BASE COLEMAK)
 
 #ifndef ZMK_BASE_LAYER
   #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                 \
