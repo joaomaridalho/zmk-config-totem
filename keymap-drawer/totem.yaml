@@ -299,8 +299,5 @@ combos:
   k: '}'
   l: [Base, Colemak]
 - p: [7, 8]
-  k: '&unshift_tap PT_ACUTE'
-  l: [Base, Colemak]
-- p: [8, 9]
-  k: '&grave_macro'
+  k: '&acute_combo_ht'
   l: [Base, Colemak]
