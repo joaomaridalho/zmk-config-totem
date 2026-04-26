@@ -33,12 +33,12 @@ layers:
   - {t: ., h: RCTRL}
   - {t: '-', h: LALT}
   - {t: BSPC, s: DEL}
-  - {t: TAB, h: GamePlus}
+  - {t: TAB, h: Fun}
   - RET
   - '&magic_shift'
   - {t: '&num_dance', h: Num}
   - SPACE
-  - NumMod
+  - Sym
   Colemak:
   - Q
   - W
@@ -72,52 +72,13 @@ layers:
   - {t: ., h: RCTRL}
   - {t: '-', h: LALT}
   - {t: ▽, type: trans}
-  - {t: TAB, h: GamePlus}
+  - {t: TAB, h: Fun}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Num:
-  - /
-  - '7'
-  - '8'
-  - '9'
-  - '-'
-  - ''
-  - Ctl+D
-  - Ctl+U
-  - ''
-  - {t: Colemak, h: toggle}
-  - '*'
-  - '4'
-  - '5'
-  - '6'
-  - +
-  - LEFT
-  - DOWN
-  - UP
-  - RIGHT
-  - ''
-  - CANCEL
-  - ','
-  - '1'
-  - '2'
-  - '3'
-  - '='
-  - N
-  - '&num_sk_rshift'
-  - '&num_sk_rgui'
-  - '&num_sk_rctrl'
-  - '&num_sk_lalt'
-  - {t: ▽, type: trans}
-  - .
-  - RET
-  - '0'
-  - {t: CANCEL, type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  NumMod:
   - /
   - '7'
   - '8'
@@ -153,9 +114,9 @@ layers:
   - .
   - RET
   - '0'
-  - CANCEL
+  - {t: CANCEL, type: held}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   Sym:
   - '!'
   - <
@@ -194,9 +155,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   Gaming:
-  - {t: Gaming, h: sticky}
+  - {t: GamePlus, h: sticky}
   - Q
   - R
   - E
@@ -231,11 +192,11 @@ layers:
   - RET
   - LCTRL
   - SPACE
-  - GamePlus
+  - Fun
   - SPACE
   - '&key_repeat'
   GamePlus:
-  - '1'
+  - {t: '1', type: held}
   - '2'
   - '3'
   - '4'
@@ -267,9 +228,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
-  - {t: Gaming, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: GamePlus, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -279,7 +240,7 @@ layers:
   - F8
   - F9
   - F11
-  - {t: Sym, h: toggle}
+  - {t: Gaming, h: toggle}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
@@ -306,7 +267,7 @@ layers:
   - {t: RCTRL, h: sticky}
   - {t: LALT, h: sticky}
   - ''
-  - F10
+  - {t: F10, type: held}
   - RET
   - F12
   - CANCEL
