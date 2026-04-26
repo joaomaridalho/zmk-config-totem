@@ -24,9 +24,10 @@
 #define BASE       0
 #define COLEMAK    1
 #define NUM        2
-#define GAMING     3
-#define GAME_PLUS  4
-#define FUN        5
+#define SYM        3
+#define GAMING     4
+#define GAME_PLUS  5
+#define FUN        6
 
 #define QUICK_TAP_MS 175
 
@@ -179,7 +180,7 @@ ZMK_BASE_LAYER(Base,
                      &kp PT_Q         &kp PT_W         &kp PT_E         &kp PT_R         &kp PT_T         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
                      &kp PT_A         &kp PT_S         &kp PT_D         &kp PT_F         &kp PT_G         , &kp PT_H         &kp PT_J         &kp PT_K         &kp PT_L        &kp PT_C_CEDILLA ,
     &kp ESCAPE       &hml LALT PT_Z   &hml LCTRL PT_X  &hml LGUI PT_C   &hml LSHIFT PT_V &kp PT_B         , &kp PT_N         &hmr RSHFT PT_M  &hmr RGUI PT_COMMA &hmr RCTRL PT_DOT &hmr LALT PT_MINUS &bs_del ,
-                                                       &lt FUN TAB      &kp RET          &magic_shift     , SMART_NUM        &kp SPACE        &key_repeat
+                                                       &lt FUN TAB      &kp RET          &magic_shift     , SMART_NUM        &kp SPACE        &mo SYM
 )
 ZMK_BASE_LAYER(Colemak,
                      &kp PT_Q         &kp PT_W         &kp PT_F         &kp PT_P         &kp PT_B         , &kp PT_J         &kp PT_L         &kp PT_U         &kp PT_Y        &kp PT_C_CEDILLA,
@@ -192,6 +193,12 @@ ZMK_BASE_LAYER(Num,
                      &kp PT_ASTERISK  &kp PT_N4        &kp PT_N5        &kp PT_N6        &kp PT_PLUS      , &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT       &none ,
     &kp K_CANCEL     &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &sk LSHIFT       &sk RCTRL        &sk RALT        &sk RGUI    &trans ,
                                                        &kp PT_DOT       &kp RET          &kp PT_N0        , &kp K_CANCEL     &trans           &trans
+)
+ZMK_BASE_LAYER(Sym,
+                     &kp PT_EXCL      &kp PT_LT        &kp PT_GT        &kp PT_EQUAL     &kp PT_PLUS      , &kp PT_PIPE      &kp PT_AMPS      &kp PT_AT        &kp PT_HASH     &kp PT_DOLLAR,
+                     &kp PT_QUESTION  &kp PT_LPAR      &kp PT_RPAR      &kp PT_LBKT      &kp PT_RBKT      , &kp PT_SLASH     &kp PT_LBRC      &kp PT_RBRC      &kp PT_DQT      &kp PT_BSLH,
+    &kp K_CANCEL     &kp PT_SQT       &kp PT_GRAVE     &kp PT_TILDE     &kp PT_CARET     &kp PT_PRCNT     , &none            &none            &kp PT_SEMI      &kp PT_COLON    &none           &trans,
+                                                       &trans           &trans           &trans           , &trans           &trans           &trans
 )
 ZMK_BASE_LAYER(Gaming,
                      &sl GAME_PLUS    &kp PT_Q         &kp PT_R         &kp PT_E         &kp PT_T         , &kp PT_Y         &kp PT_U         &kp PT_I         &kp PT_O        &kp PT_P ,
