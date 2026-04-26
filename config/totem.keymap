@@ -66,6 +66,12 @@ ZMK_STICKY_KEY(qsk,
         ignore-modifiers;
 )
 
+ZMK_STICKY_KEY(skm,
+        bindings = <&kp>;
+        release-after-ms = <2000>;
+        ignore-modifiers;
+)
+
 ZMK_MACRO(grave_spc,
     bindings = <&macro_tap &kp PT_GRAVE &kp PT_SPACE>;
     wait-ms = <0>;
@@ -192,7 +198,7 @@ ZMK_BASE_LAYER(Colemak,
 ZMK_BASE_LAYER(Num,
                      &kp PT_SLASH     &kp PT_N7        &kp PT_N8        &kp PT_N9        &kp PT_MINUS     , &none            &kp RC(PT_D)     &kp RC(PT_U)     &none           &tog COLEMAK,
                      &kp PT_ASTERISK  &kp PT_N4        &kp PT_N5        &kp PT_N6        &kp PT_PLUS      , &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT       &none ,
-    &kp K_CANCEL     &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &sk RSHFT        &sk RGUI         &sk RCTRL       &sk LALT     &trans ,
+    &kp K_CANCEL     &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &skm RSHFT       &skm RGUI        &skm RCTRL      &skm LALT    &trans ,
                                                        &kp PT_DOT       &kp RET          &kp PT_N0        , &kp K_CANCEL     &trans           &trans
 )
 ZMK_BASE_LAYER(Sym,
@@ -217,6 +223,6 @@ ZMK_BASE_LAYER(GamePlus,
 ZMK_BASE_LAYER(Fun,
                      &kp F10          &kp F7           &kp F8           &kp F9           &kp F11          , &tog GAMING      &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2    &tog COLEMAK ,
                      &kp F12          &kp F4           &kp F5           &kp F6           &none            , &out OUT_TOG     &bt BT_CLR       &none            &none           &none ,
-    &kp K_CANCEL     &none            &kp F1           &kp F2           &kp F3           &none            , &none            &sk RSHFT        &sk RGUI         &sk RCTRL       &sk LALT        &none ,
+    &kp K_CANCEL     &none            &kp F1           &kp F2           &kp F3           &none            , &none            &skm RSHFT       &skm RGUI        &skm RCTRL      &skm LALT       &none ,
                                                        &kp F10          &kp RET          &kp F12          , &kp K_CANCEL     &trans           &trans
 )
