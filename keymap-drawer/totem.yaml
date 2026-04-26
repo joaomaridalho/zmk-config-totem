@@ -38,7 +38,7 @@ layers:
   - '&magic_shift'
   - {t: '&num_dance', h: Num}
   - SPACE
-  - '&key_repeat'
+  - Sym
   Colemak:
   - Q
   - W
@@ -106,10 +106,10 @@ layers:
   - '3'
   - '='
   - N
-  - {t: LSHIFT, h: sticky}
-  - {t: RCTRL, h: sticky}
-  - {t: RALT, h: sticky}
+  - {t: RSHFT, h: sticky}
   - {t: RGUI, h: sticky}
+  - {t: RCTRL, h: sticky}
+  - {t: LALT, h: sticky}
   - {t: ▽, type: trans}
   - .
   - RET
@@ -117,6 +117,45 @@ layers:
   - {t: CANCEL, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  Sym:
+  - '!'
+  - <
+  - '>'
+  - '='
+  - +
+  - '|'
+  - '&'
+  - '@'
+  - '#'
+  - $
+  - '?'
+  - (
+  - )
+  - '['
+  - ']'
+  - /
+  - '{'
+  - '}'
+  - '"'
+  - \
+  - CANCEL
+  - ''''
+  - '`'
+  - '~'
+  - ^
+  - '%'
+  - ''
+  - ''
+  - ;
+  - ':'
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   Gaming:
   - {t: GamePlus, h: sticky}
   - Q
@@ -223,10 +262,10 @@ layers:
   - F3
   - ''
   - ''
-  - {t: LSHIFT, h: sticky}
-  - {t: RCTRL, h: sticky}
-  - {t: RALT, h: sticky}
+  - {t: RSHFT, h: sticky}
   - {t: RGUI, h: sticky}
+  - {t: RCTRL, h: sticky}
+  - {t: LALT, h: sticky}
   - ''
   - {t: F10, type: held}
   - RET
@@ -269,7 +308,7 @@ combos:
   k: ''''
   l: [Base, Colemak]
 - p: [7, 17]
-  k: '"'
+  k: {t: '"', s: '&grave_spc'}
   l: [Base, Colemak]
 - p: [2, 1]
   k: {t: '|', s: '&'}
@@ -299,8 +338,5 @@ combos:
   k: '}'
   l: [Base, Colemak]
 - p: [7, 8]
-  k: '&acute_macro'
-  l: [Base, Colemak]
-- p: [8, 9]
-  k: '&grave_macro'
+  k: ACUTE
   l: [Base, Colemak]
