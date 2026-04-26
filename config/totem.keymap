@@ -130,6 +130,7 @@ ZMK_MACRO(num_sk_rgui,
         num_modded: num_modded {
             compatible = "zmk,behavior-auto-layer";
             #binding-cells = <1>;
+            continue-list = <F24>;
             ignore-modifiers;
         };
     };
