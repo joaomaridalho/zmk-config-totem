@@ -33,12 +33,12 @@ layers:
   - {t: ., h: RCTRL}
   - {t: '-', h: LALT}
   - {t: BSPC, s: DEL}
-  - {t: TAB, h: Fun}
+  - {t: TAB, h: GamePlus}
   - RET
   - '&magic_shift'
   - {t: '&num_dance', h: Num}
   - SPACE
-  - Sym
+  - NumMod
   Colemak:
   - Q
   - W
@@ -72,7 +72,7 @@ layers:
   - {t: ., h: RCTRL}
   - {t: '-', h: LALT}
   - {t: ▽, type: trans}
-  - {t: TAB, h: Fun}
+  - {t: TAB, h: GamePlus}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -117,6 +117,45 @@ layers:
   - {t: CANCEL, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  NumMod:
+  - /
+  - '7'
+  - '8'
+  - '9'
+  - '-'
+  - ''
+  - Ctl+D
+  - Ctl+U
+  - ''
+  - {t: Colemak, h: toggle}
+  - '*'
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - ''
+  - CANCEL
+  - ','
+  - '1'
+  - '2'
+  - '3'
+  - '='
+  - N
+  - {t: RSHFT, h: sticky}
+  - {t: RGUI, h: sticky}
+  - {t: RCTRL, h: sticky}
+  - {t: LALT, h: sticky}
+  - {t: ▽, type: trans}
+  - .
+  - RET
+  - '0'
+  - CANCEL
+  - {t: ▽, type: trans}
+  - {type: held}
   Sym:
   - '!'
   - <
@@ -155,9 +194,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   Gaming:
-  - {t: GamePlus, h: sticky}
+  - {t: Gaming, h: sticky}
   - Q
   - R
   - E
@@ -192,11 +231,11 @@ layers:
   - RET
   - LCTRL
   - SPACE
-  - Fun
+  - GamePlus
   - SPACE
   - '&key_repeat'
   GamePlus:
-  - {t: '1', type: held}
+  - '1'
   - '2'
   - '3'
   - '4'
@@ -228,9 +267,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: GamePlus, h: toggle}
+  - {t: Gaming, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -240,7 +279,7 @@ layers:
   - F8
   - F9
   - F11
-  - {t: Gaming, h: toggle}
+  - {t: Sym, h: toggle}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
@@ -267,7 +306,7 @@ layers:
   - {t: RCTRL, h: sticky}
   - {t: LALT, h: sticky}
   - ''
-  - {t: F10, type: held}
+  - F10
   - RET
   - F12
   - CANCEL
