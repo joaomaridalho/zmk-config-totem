@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/num_word.dtsi>
+#include <behaviors/num_session.dtsi>
 #ifndef KEYMAP_DRAWER
 #include "keys_pt.h"
 #endif
@@ -28,7 +29,6 @@
 #define GAMING     4
 #define GAME_PLUS  5
 #define FUN        6
-#define NUMMOD     7
 
 #define QUICK_TAP_MS 175
 
@@ -85,7 +85,7 @@ ZMK_HOLD_TAP(smart_num,
      quick-tap-ms = <QUICK_TAP_MS>;
  )
  ZMK_TAP_DANCE(num_dance,
-     bindings = <&num_free NUM>, <&num_word NUM>;
+     bindings = <&num_session NUM>, <&num_word NUM>;
      tapping-term-ms = <200>;
  )
 
@@ -94,49 +94,8 @@ ZMK_TAP_DANCE(magic_shift,
     bindings = <&qsk LSHFT>, <&caps_word>;
 )
 
-ZMK_MACRO(num_sk_rshift,
-    bindings = <&macro_tap &num_modded NUMMOD &sk RSHFT>;
-    wait-ms = <0>;
-    tap-ms = <5>;
-)
-
-ZMK_MACRO(num_sk_rgui,
-    bindings = <&macro_tap &num_modded NUMMOD &sk RGUI>;
-    wait-ms = <0>;
-    tap-ms = <5>;
-)
-
-ZMK_MACRO(num_sk_rctrl,
-    bindings = <&macro_tap &num_modded NUMMOD &sk RCTRL>;
-    wait-ms = <0>;
-    tap-ms = <5>;
-)
-
-ZMK_MACRO(num_sk_lalt,
-    bindings = <&macro_tap &num_modded NUMMOD &sk LALT>;
-    wait-ms = <0>;
-    tap-ms = <5>;
-)
-
 // Macros
 // MOD MORPHS
-/ {
-    behaviors {
-        num_free: num_free {
-            compatible = "zmk,behavior-auto-layer";
-            #binding-cells = <1>;
-            continue-list = <N0 N1 N2 N3 N4 N5 N6 N7 N8 N9>;
-        };
-
-        num_modded: num_modded {
-            compatible = "zmk,behavior-auto-layer";
-            #binding-cells = <1>;
-            continue-list = <F24>;
-            ignore-modifiers;
-        };
-    };
-};
-
 ZMK_MOD_MORPH(bs_del,
     bindings = <&kp BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -231,12 +190,6 @@ ZMK_BASE_LAYER(Colemak,
                                                        &lt FUN TAB      &trans           &trans           , &trans           &trans           &trans
 )
 ZMK_BASE_LAYER(Num,
-                     &kp PT_SLASH     &kp PT_N7        &kp PT_N8        &kp PT_N9        &kp PT_MINUS     , &none            &kp RC(PT_D)     &kp RC(PT_U)     &none           &tog COLEMAK,
-                     &kp PT_ASTERISK  &kp PT_N4        &kp PT_N5        &kp PT_N6        &kp PT_PLUS      , &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT       &none ,
-    &kp K_CANCEL     &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &num_sk_rshift   &num_sk_rgui     &num_sk_rctrl   &num_sk_lalt &trans ,
-                                                       &kp PT_DOT       &kp RET          &kp PT_N0        , &kp K_CANCEL     &trans           &trans
-)
-ZMK_BASE_LAYER(NumMod,
                      &kp PT_SLASH     &kp PT_N7        &kp PT_N8        &kp PT_N9        &kp PT_MINUS     , &none            &kp RC(PT_D)     &kp RC(PT_U)     &none           &tog COLEMAK,
                      &kp PT_ASTERISK  &kp PT_N4        &kp PT_N5        &kp PT_N6        &kp PT_PLUS      , &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT       &none ,
     &kp K_CANCEL     &kp PT_COMMA     &kp PT_N1        &kp PT_N2        &kp PT_N3        &kp PT_EQUAL     , &kp PT_N         &sk RSHFT        &sk RGUI         &sk RCTRL       &sk LALT     &trans ,
