@@ -125,6 +125,7 @@ ZMK_MACRO(num_sk_lalt,
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <1>;
             bindings = <&kp>;
+            release-after-ms = <1000>;
             lazy;
             ignore-modifiers;
         };
