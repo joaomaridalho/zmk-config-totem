@@ -106,10 +106,10 @@ layers:
   - '3'
   - '='
   - N
-  - '&num_sk_lshift'
-  - '&num_sk_rctrl'
-  - '&num_sk_ralt'
+  - '&num_sk_rshift'
   - '&num_sk_rgui'
+  - '&num_sk_rctrl'
+  - '&num_sk_lalt'
   - {t: ▽, type: trans}
   - .
   - RET
@@ -262,10 +262,10 @@ layers:
   - F3
   - ''
   - ''
-  - {t: LSHIFT, h: sticky}
-  - {t: RCTRL, h: sticky}
-  - {t: RALT, h: sticky}
+  - {t: RSHFT, h: sticky}
   - {t: RGUI, h: sticky}
+  - {t: RCTRL, h: sticky}
+  - {t: LALT, h: sticky}
   - ''
   - {t: F10, type: held}
   - RET
