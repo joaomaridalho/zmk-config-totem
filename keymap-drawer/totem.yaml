@@ -38,7 +38,7 @@ layers:
   - '&magic_shift'
   - {t: '&num_dance', h: Num}
   - SPACE
-  - '&key_repeat'
+  - Sym
   Colemak:
   - Q
   - W
@@ -117,6 +117,45 @@ layers:
   - {t: CANCEL, type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  Sym:
+  - '!'
+  - <
+  - '>'
+  - '='
+  - +
+  - '|'
+  - '&'
+  - '@'
+  - '#'
+  - $
+  - '?'
+  - (
+  - )
+  - '['
+  - ']'
+  - /
+  - '{'
+  - '}'
+  - '"'
+  - \
+  - CANCEL
+  - ''''
+  - '`'
+  - '~'
+  - ^
+  - '%'
+  - ''
+  - ''
+  - ;
+  - ':'
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   Gaming:
   - {t: GamePlus, h: sticky}
   - Q
