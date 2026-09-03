@@ -36,9 +36,9 @@ layers:
   - {t: TAB, h: Fun}
   - RET
   - '&magic_shift'
-  - {t: '&num_dance', h: Num}
+  - '&smart_num_clear_shift'
   - SPACE
-  - Sym
+  - '&sym_clear_shift'
   Colemak:
   - Q
   - W
@@ -73,6 +73,45 @@ layers:
   - {t: '-', h: LALT}
   - {t: ▽, type: trans}
   - {t: TAB, h: Fun}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Caps:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Sft+CEDILLA
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: _, h: LALT}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -114,7 +153,7 @@ layers:
   - .
   - RET
   - '0'
-  - {t: CANCEL, type: held}
+  - CANCEL
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   Sym:
@@ -155,7 +194,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   Gaming:
   - {t: GamePlus, h: sticky}
   - Q
@@ -189,7 +228,7 @@ layers:
   - .
   - '-'
   - {t: BSPC, s: DEL}
-  - RET
+  - {t: RET, h: GamePlus}
   - LCTRL
   - SPACE
   - Fun
@@ -230,7 +269,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: GamePlus, h: toggle}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -275,68 +314,68 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [12, 11]
-  k: {t: '?', h: Sft+LALT, s: '!'}
-  l: [Base, Colemak]
+  k: {t: '?', s: '!'}
+  l: [Base, Colemak, Caps]
 - p: [13, 12]
-  k: {t: /, h: Sft+LCTRL, s: \}
-  l: [Base, Colemak]
+  k: {t: /, s: \}
+  l: [Base, Colemak, Caps]
 - p: [23, 22]
   k: Ctl+C
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [24, 23]
   k: Ctl+V
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [16, 17]
-  k: {t: (, h: Sft+LCTRL, s: <}
-  l: [Base, Colemak]
+  k: {t: (, s: <}
+  l: [Base, Colemak, Caps]
 - p: [17, 18]
-  k: {t: ), h: Sft+LALT, s: '>'}
-  l: [Base, Colemak]
+  k: {t: ), s: '>'}
+  l: [Base, Colemak, Caps]
 - p: [27, 28]
   k: {t: '[', s: '{'}
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [28, 29]
   k: {t: ']', s: '}'}
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [3, 2]
   k: '%'
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [3, 13]
   k: +
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [2, 12]
   k: ''''
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [7, 17]
   k: {t: '"', s: '&grave_spc'}
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [2, 1]
   k: {t: '|', s: '&'}
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [14, 13]
   k: {t: $, s: AltGr+E}
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [15, 16]
   k: {t: '@', s: '#'}
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [5, 6]
   k: ORDM
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [6, 7]
   k: '~'
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [6, 16]
   k: <
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [8, 18]
   k: '>'
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [16, 27]
   k: '{'
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [18, 29]
   k: '}'
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
 - p: [7, 8]
   k: ACUTE
-  l: [Base, Colemak]
+  l: [Base, Colemak, Caps]
