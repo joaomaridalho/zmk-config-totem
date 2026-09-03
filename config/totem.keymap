@@ -91,9 +91,23 @@ ZMK_HOLD_TAP(smart_num,
      tapping-term-ms = <200>;
  )
 
-ZMK_TAP_DANCE(magic_shift,
+// Combos capture position events before tap dances can observe them (ZMK #1701),
+// so arm sticky shift eagerly and use a separate tap dance only to count taps.
+ZMK_MACRO(magic_caps_word,
+    bindings = <&macro_tap &kp K_CANCEL &caps_word>;
+    wait-ms = <0>;
+    tap-ms = <5>;
+)
+
+ZMK_TAP_DANCE(magic_shift_taps,
     tapping-term-ms = <200>;
-    bindings = <&qsk LSHFT>, <&caps_word>;
+    bindings = <&none>, <&magic_caps_word>;
+)
+
+ZMK_MACRO(magic_shift,
+    bindings = <&macro_tap &qsk LSHFT &magic_shift_taps>;
+    wait-ms = <0>;
+    tap-ms = <5>;
 )
 
 // Macros
