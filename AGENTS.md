@@ -77,12 +77,15 @@ ZMK_BASE_LAYER(Base,
 |-------|------------|----------------------------------------------|
 | 0     | BASE       | QWERTY, Portuguese layout                    |
 | 1     | COLEMAK    | Colemak-DH, Portuguese layout                |
-| 2     | NUM        | Numpad + arrows + sticky mods                |
-| 3     | GAMING     | Gaming QWERTY, no HRMs, no combos            |
-| 4     | GAME_PLUS  | Gaming sub-layer (numbers, extra binds)      |
-| 5     | FUN        | F-keys, BT profiles, output toggle           |
+| 2     | CAPS       | Caps Word companion for PT-specific keys     |
+| 3     | NUM        | Numpad + arrows + sticky mods                |
+| 4     | SYM        | Symbol fallback layer                        |
+| 5     | GAMING     | Gaming QWERTY, no HRMs, no text combos       |
+| 6     | GAME_PLUS  | Gaming sub-layer (numbers, extra binds)      |
+| 7     | FUN        | F-keys, BT profiles, output toggle           |
 
-Combos are active only on BASE and COLEMAK (index 0 and 1).
+`CAPS` is an internal auto-layer below NUM/SYM. It overrides only `ç` and `-`
+while Caps Word is active. Text combos are active on BASE, COLEMAK, and CAPS.
 
 ---
 
@@ -109,23 +112,19 @@ Config (`MAKE_HRM` macro):
 ## Combos
 
 Symbol-heavy approach: most symbols (parens, brackets, braces, slash, pipe,
-`@`, `#`, `=`, `%`, `$`, accent keys, etc.) are combos — there is no
-dedicated SYM layer. Active only on BASE + COLEMAK.
+`@`, `#`, `=`, `%`, `$`, accent keys, etc.) are combos. The dedicated SYM
+layer is a fallback; combos are the primary input method. They are active on
+BASE, COLEMAK, and the CAPS companion layer.
 
 Timing defines:
 ```
 COMBO_TERM_FAST   // chord window for fast combos (adjacent keys)
-COMBO_TERM_SLOW   // chord window for combos involving HRM positions
 COMBO_IDLE_FAST   // require-prior-idle for fast combos
-COMBO_IDLE_SLOW   // require-prior-idle for slow combos
 ```
 
 **Bottom-row combo positions are adjacent to, not on, the letter keys:**
 - `copy`  = LB2+LB3 (X+C positions) → emits `Ctrl+C`
 - `paste` = LB1+LB2 (Z+X positions) → emits `Ctrl+V`
-
-`ZMK_COMBO_8` wraps combos that land on HRM positions so they fire as
-tap-only (workaround for ZMK issue #544).
 
 ---
 
@@ -133,12 +132,28 @@ tap-only (workaround for ZMK issue #544).
 
 - `PT_GRAVE = LS(PT_ACUTE)` — Shift+acute produces grave on PT layout
 - `PT_GRAVE` is a dead key; a standalone bare grave requires a trailing space
-- `magic_shift` uses `qsk` with `ignore-modifiers`, which means sticky shift
-  persists through combo chord events. The `acute_macro` and `grave_macro`
-  macros explicitly release LSHFT/RSHFT before emitting the accent key to
-  prevent sticky shift from converting acute → grave unintentionally.
-- Do not remove the shift-release preamble from those macros without
-  rethinking the `qsk` / `magic_shift` interaction.
+- ZMK Caps Word only shifts alphabetic HID usages. `PT_C_CEDILLA` and
+  `PT_MINUS` are punctuation usages, so the CAPS companion layer emits `Ç` and
+  `_` explicitly while preserving Caps Word.
+- Caps Word deliberately does not continue through dead accent combos.
+- `magic_shift` eagerly arms `qsk` so Shift reaches combo outputs. A tap is
+  one-shot Shift, a chorded hold is normal held Shift, and a double tap within
+  300 ms toggles Caps Word.
+- `K_CANCEL` consumes pending sticky Shift before Caps Word and NUM/SYM entry.
+  It is included in the Caps continuation lists so it does not break an active
+  Caps Word session.
+- Shift+double-quote emits `grave_spc`, a committed literal grave. Shift+acute
+  follows the native PT layout and emits the dead grave key.
+
+---
+
+## Gaming
+
+- `LT0` activates GAME_PLUS as a sticky one-shot layer.
+- The outer left thumb is Enter on tap and momentary GAME_PLUS on hold.
+- GAME_PLUS keeps `1`–`5` on the left top row and `M I G B V` on the left home
+  row, with `Z` at LB1. Its inner left thumb is transparent so Space continues
+  to work while GAME_PLUS is active.
 
 ---
 
@@ -162,6 +177,7 @@ West modules (`config/west.yml`):
 | zmk-helpers         | urob       | main   |
 | zmk-auto-layer      | urob       | main   |
 | zmk-dongle-display  | englmaxi   | main   |
+| zmk-behavior-num-session | joaomaridalho | main |
 
 ---
 
@@ -188,6 +204,8 @@ West modules (`config/west.yml`):
 4. `totem_dongle.conf` USB 1.1 compat: do not remove `CONFIG_ZMK_USB_BOOT=y`,
    `CONFIG_USB_CDC_ACM=n`, or `CONFIG_USB_HID_POLL_INTERVAL_MS=10`.
 5. `PT_GRAVE` is a dead key — standalone use needs a trailing space.
-6. `magic_shift` + `qsk` with `ignore-modifiers` leaks sticky shift through
-   combos. The accent macros compensate; keep that pattern intact.
-7. The `keymap-drawer/` files are auto-generated. Do not hand-edit them.
+6. The CAPS companion layer must stay below NUM/SYM, and all text combos must
+   include CAPS or they stop working while Caps Word is active.
+7. `K_CANCEL` is a host-visible key used to consume pending sticky Shift. Keep
+   it in both Caps continuation lists so double-tap toggling stays symmetric.
+8. The `keymap-drawer/` files are auto-generated. Do not hand-edit them.
