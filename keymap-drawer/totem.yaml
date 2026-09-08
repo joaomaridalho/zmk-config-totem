@@ -124,8 +124,8 @@ layers:
   - '9'
   - '-'
   - ''
-  - Ctl+D
-  - Ctl+U
+  - Gui+Ctl+LEFT
+  - Gui+Ctl+RIGHT
   - ''
   - {t: Colemak, h: toggle}
   - '*'
