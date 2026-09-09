@@ -98,6 +98,10 @@ ZMK_HOLD_TAP(smart_num,
      tapping-term-ms = <200>;
  )
 
+&num_session {
+    continue-list = <DOT>;
+};
+
 ZMK_MACRO(smart_num_clear_shift,
     bindings = <&macro_tap &kp K_CANCEL>,
                <&macro_press &smart_num NUM 0>,
