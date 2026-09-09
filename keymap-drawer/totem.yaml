@@ -123,10 +123,10 @@ layers:
   - '8'
   - '9'
   - '-'
-  - Alt+SPACE
+  - ''
+  - Ctl+SPACE
   - Gui+Ctl+LEFT
   - Gui+Ctl+RIGHT
-  - Ctl+SPACE
   - '&swapper'
   - '*'
   - '4'
@@ -137,14 +137,14 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - Sft+TAB
+  - '&swapper_prev'
   - CANCEL
   - ','
   - '1'
   - '2'
   - '3'
   - '='
-  - N
+  - Alt+SPACE
   - {t: RSHFT, h: sticky}
   - {t: RGUI, h: sticky}
   - {t: RCTRL, h: sticky}
