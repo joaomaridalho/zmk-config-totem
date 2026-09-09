@@ -123,11 +123,11 @@ layers:
   - '8'
   - '9'
   - '-'
-  - ''
+  - Alt+SPACE
   - Gui+Ctl+LEFT
   - Gui+Ctl+RIGHT
-  - ''
-  - {t: Colemak, h: toggle}
+  - Ctl+SPACE
+  - '&swapper'
   - '*'
   - '4'
   - '5'
@@ -137,7 +137,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - ''
+  - Sft+TAB
   - CANCEL
   - ','
   - '1'
