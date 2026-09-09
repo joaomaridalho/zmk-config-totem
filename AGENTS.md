@@ -176,6 +176,7 @@ West modules (`config/west.yml`):
 | zmk                 | zmkfirmware| main   |
 | zmk-helpers         | urob       | main   |
 | zmk-auto-layer      | urob       | main   |
+| zmk-tri-state       | urob       | main   |
 | zmk-dongle-display  | englmaxi   | main   |
 | zmk-behavior-num-session | joaomaridalho | main |
 
