@@ -232,7 +232,7 @@ layers:
   - LCTRL
   - SPACE
   - Fun
-  - SPACE
+  - RET
   - '&key_repeat'
   GamePlus:
   - {t: '1', type: held}
